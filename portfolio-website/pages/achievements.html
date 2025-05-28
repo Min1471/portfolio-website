@@ -1,43 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Achievements - My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/responsive.css">
 </head>
+
 <body>
     <header>
-        <h1>My Achievements</h1>
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="skills.html">Skills</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section>
-            <h2>Academic Achievements</h2>
-            <ul>
-                <li>Master of Information Technology - UNSW, 2023</li>
-                <li>Dean's List - 2022</li>
-                <li>Completed a research project on AI and Machine Learning</li>
+
+    <section id="page-banner">
+        <div class="banner-content">
+            <h1>My Achievements</h1>
+            <p>A showcase of my academic and professional accomplishments</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- Category tabs for navigation -->
+        <div class="achievement-categories">
+            <ul class="category-tabs">
+                <li class="active" data-target="degrees">Degrees & Certificates</li>
+                <li data-target="experiences">Experiences</li>
+                <li data-target="projects">Projects</li>
             </ul>
+        </div>
+
+        <!-- Degrees & Certificates Section -->
+        <section id="degrees" class="achievement-section active-section">
+            <h2>Degrees & Certificates</h2>
+            <div class="achievement-cards">
+                <div class="achievement-card">
+                    <div class="achievement-icon">🎓</div>
+                    <h3>Master of Information Technology</h3>
+                    <p>UNSW, 2023</p>
+                    <p>Specialized in advanced computing and data analytics</p>
+                    <a href="achievements/masters-degree.html" class="btn btn-outline">View Details</a>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">🏆</div>
+                    <h3>AWS Cloud Practitioner</h3>
+                    <p>2022</p>
+                    <p>Certified in AWS fundamentals and cloud concepts</p>
+                    <a href="achievements/aws-certification.html" class="btn btn-outline">View Certificate</a>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">�</div>
+                    <h3>Full Stack Web Development</h3>
+                    <p>Udemy, 2021</p>
+                    <p>Comprehensive certification in modern web technologies</p>
+                    <a href="achievements/web-dev-certification.html" class="btn btn-outline">View Certificate</a>
+                </div>
+            </div>
         </section>
-        <section>
-            <h2>Professional Achievements</h2>
-            <ul>
-                <li>Internship at XYZ Company - Developed a web application</li>
-                <li>Volunteer at ABC Organization - Led a tech workshop</li>
-                <li>Certification in Cloud Computing - 2023</li>
-            </ul>
+
+        <!-- Experiences Section -->
+        <section id="experiences" class="achievement-section">
+            <h2>Professional Experiences</h2>
+            <div class="achievement-cards">
+                <div class="achievement-card">
+                    <div class="achievement-icon">💼</div>
+                    <h3>Web Developer Intern</h3>
+                    <p>XYZ Company, 2022-2023</p>
+                    <p>Developed responsive web applications using React and Node.js</p>
+                    <a href="achievements/xyz-internship.html" class="btn btn-outline">View Experience</a>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">👨‍🏫</div>
+                    <h3>Teaching Assistant</h3>
+                    <p>UNSW, 2022</p>
+                    <p>Assisted in teaching web development and database courses</p>
+                    <a href="achievements/teaching-assistant.html" class="btn btn-outline">View Experience</a>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">🌐</div>
+                    <h3>Freelance Developer</h3>
+                    <p>2020-Present</p>
+                    <p>Built websites and applications for various clients</p>
+                    <a href="achievements/freelance-work.html" class="btn btn-outline">View Experience</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="achievement-section">
+            <h2>Notable Projects</h2>
+            <div class="achievement-cards">
+                <div class="achievement-card">
+                    <div class="achievement-icon">📱</div>
+                    <h3>E-Commerce Platform</h3>
+                    <p>Full-stack application</p>
+                    <p>Built with React, Node.js, and MongoDB</p>
+                    <a href="achievements/ecommerce-project.html" class="btn btn-outline">View Project</a>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">🤖</div>
+                    <h3>AI Chatbot</h3>
+                    <p>Machine learning project</p>
+                    <p>Natural language processing using Python and TensorFlow</p>
+                    <a href="achievements/chatbot-project.html" class="btn btn-outline">View Project</a>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">📊</div>
+                    <h3>Data Visualization Dashboard</h3>
+                    <p>Interactive analytics tool</p>
+                    <p>Created with D3.js and Vue.js</p>
+                    <a href="achievements/dashboard-project.html" class="btn btn-outline">View Project</a>
+                </div>
+            </div>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2023 My Portfolio. All rights reserved.</p>
     </footer>
+
     <script src="../js/main.js"></script>
+    <script>
+        // JavaScript to handle tab switching
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('.category-tabs li');
+            const sections = document.querySelectorAll('.achievement-section');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function () {
+                    // Remove active class from all tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+
+                    // Hide all sections
+                    sections.forEach(section => {
+                        section.classList.remove('active-section');
+                    });
+
+                    // Show the target section
+                    const targetSection = document.getElementById(this.getAttribute('data-target'));
+                    if (targetSection) {
+                        targetSection.classList.add('active-section');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
+
 </html>
