@@ -536,6 +536,23 @@ class AchievementDataManager {
                     'Hyperparameter tuning',
                     'Performance comparison of different models'
                 ]
+            },
+            'adaptive-noise-cancellation': {
+                title: 'Adaptive Noise Cancellation Using a Fully Connected Network: A Lesson Learned',
+                completed: 'May 2022',
+                type: 'Research Project',
+                category: 'project',
+                github: '-- No GitHub repository available for this project --',
+                demo: '-- No demo available for this project --',
+                overview: 'Ambient noise causes annoying difficulty for listeners, especially in online learning and work-from-home environments such as during the COVID-19 pandemic. The aim of this work was to employ the neural network to mitigate such ambient noise in the online environment. The software was designed, implemented, and tested on 4 types of noise. The algorithm used was a fully connected network. The results indicated that the standard fully connected network might not be an effective solution for a specific situation. Nonetheless, the processing time was very low, making it possible for real-time application on standalone devices. The implementation using leaky ReLu, creating leaky networks, offered slightly better results in English speeches, i.e. an average of 1.382 and 0.4389 in the PESQ and STOI, respectively. The Thai leaky networks, on another hand, exhibited an average of 3.111 and 0.7096 in PESQ and STOI, respectively.',
+                technologies: [
+                    'Programming Language: Matlab',
+                ],
+                features: [
+                    'Real-time audio processing',
+                    'Adaptive filtering techniques',
+                    'Performance evaluation against Thai and English Language'
+                ]
             }
         };
     }
