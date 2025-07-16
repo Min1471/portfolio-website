@@ -52,31 +52,30 @@
                     <a href="achievements/masters-degree.html" class="btn btn-outline">View Details</a>
                 </div>
 
-                <div class="achievement-cards">
-                    <div class="achievement-card">
-                        <div class="achievement-icon">🎓</div>
-                        <h3>Bachelor of Electrical Engineer, First Class Hornors</h3>
-                        <p>Thammasat University, 2022</p>
-                        <p>Specialized in electrical communication engineer</p>
-                        <a href="achievements/masters-degree.html" class="btn btn-outline">View Details</a>
-                    </div>
-
-                    <div class="achievement-card">
-                        <div class="achievement-icon">🏆</div>
-                        <h3>AI for business and industry training program 2021</h3>
-                        <p>AMEICC (AEM-METI Economic and Industrial Cooperation Committee), 2022</p>
-                        <p>Training sessions for applying AI and machinelearning into business and industry </p>
-                        <a href="achievements/AI_training.html" class="btn btn-outline">View Certificate</a>
-                    </div>
-
-                    <div class="achievement-card">
-                        <div class="achievement-icon">�</div>
-                        <h3>InciT outstanding paper</h3>
-                        <p> Council of IT Deans in Thailand (CITT), 2022</p>
-                        <p>Awareded for outstanding paper in the Academic conference</p>
-                        <a href="achievements/web-dev-certification.html" class="btn btn-outline">View Certificate</a>
-                    </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">🎓</div>
+                    <h3>Bachelor of Electrical Engineer, First Class Hornors</h3>
+                    <p>Thammasat University, 2022</p>
+                    <p>Specialized in electrical communication engineer</p>
+                    <a href="achievements/masters-degree.html" class="btn btn-outline">View Details</a>
                 </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">🏆</div>
+                    <h3>AI for business and industry training program 2021</h3>
+                    <p>AMEICC (AEM-METI Economic and Industrial Cooperation Committee), 2022</p>
+                    <p>Training sessions for applying AI and machinelearning into business and industry </p>
+                    <a href="achievements/AI_training.html" class="btn btn-outline">View Certificate</a>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">�</div>
+                    <h3>InciT outstanding paper</h3>
+                    <p> Council of IT Deans in Thailand (CITT), 2022</p>
+                    <p>Awareded for outstanding paper in the Academic conference</p>
+                    <a href="achievements/web-dev-certification.html" class="btn btn-outline">View Certificate</a>
+                </div>
+            </div>
         </section>
 
         <!-- Experiences Section -->
@@ -144,33 +143,6 @@
     </footer>
 
     <script src="../js/main.js"></script>
-    <script>
-        // JavaScript to handle tab switching
-        document.addEventListener('DOMContentLoaded', function () {
-            const tabs = document.querySelectorAll('.category-tabs li');
-            const sections = document.querySelectorAll('.achievement-section');
-
-            tabs.forEach(tab => {
-                tab.addEventListener('click', function () {
-                    // Remove active class from all tabs
-                    tabs.forEach(t => t.classList.remove('active'));
-                    // Add active class to clicked tab
-                    this.classList.add('active');
-
-                    // Hide all sections
-                    sections.forEach(section => {
-                        section.classList.remove('active-section');
-                    });
-
-                    // Show the target section
-                    const targetSection = document.getElementById(this.getAttribute('data-target'));
-                    if (targetSection) {
-                        targetSection.classList.add('active-section');
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 
 </html>
