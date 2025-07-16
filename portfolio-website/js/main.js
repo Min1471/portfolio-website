@@ -350,19 +350,15 @@ class AchievementDataManager {
                     'Advanced Database Systems',
                     'Machine Learning and Data Mining',
                     'Big Data Analytics',
-                    'Cloud Computing Architecture',
-                    'Software Engineering Principles',
-                    'Cybersecurity and Privacy',
+                    'Data Structures and Algorithms',
+                    'Principles of Programming',
                     'Project Management in IT'
                 ],
                 achievements: [
-                    'Graduated with Distinction Average (75%+)',
-                    'Completed capstone project on ML-based recommendation systems',
-                    'Published research paper on data privacy',
-                    'Teaching Assistant for 2 courses',
-                    'Dean\'s List for academic excellence'
+                    'Graduated with Distinction',
+                    'Completed capstone project on Conference management application',
                 ],
-                skills: ['Python', 'R', 'SQL', 'Apache Spark', 'AWS', 'Machine Learning', 'Data Engineering']
+                skills: ['Python', 'C', 'SQL', 'Apache Spark', 'Machine Learning', 'Data Engineering']
             },
             'bachelors-degree': {
                 title: 'Bachelor of Electrical Engineering',
@@ -379,16 +375,15 @@ class AchievementDataManager {
                     'Microprocessor Systems',
                     'Control Systems Engineering',
                     'Power Electronics',
-                    'Electromagnetic Field Theory'
+                    'Electromagnetic Field Theory',
+                    'Antenna Array Design'
                 ],
                 achievements: [
-                    'Graduated with First Class Honours (GPA 3.8/4.0)',
-                    'Outstanding Student Award 2021',
-                    'Senior project on IoT communication systems',
-                    'Research assistant in Communications Lab',
-                    'IEEE Student Member'
+                    'Graduated with First Class Honours (GPA 3.75/4.0)',
+                    'Senior project on digital signal processing using AI',
+                    'Research paper entered in national academic conference',
                 ],
-                skills: ['MATLAB', 'VHDL', 'C/C++', 'PCB Design', 'Signal Processing', 'IoT', 'Embedded Systems']
+                skills: ['MATLAB', 'Signal Processing', 'IoT', 'Embedded Systems', 'Power Electronics']
             },
             'ai-training': {
                 title: 'AI for Business and Industry Training Program',
@@ -407,12 +402,11 @@ class AchievementDataManager {
                     'Industry 4.0 Technologies'
                 ],
                 achievements: [
-                    'Successfully completed 80-hour intensive program',
                     'Developed AI strategy proposal for manufacturing company',
-                    'Networked with industry professionals from 15+ countries',
-                    'Presented group project on AI implementation roadmap'
+                    'Networked with industry professionals from Japan and Thailand',
+                    'Hands-on experience with AI training and tools'
                 ],
-                skills: ['Business Intelligence', 'AI Strategy', 'Process Automation', 'Data Analytics', 'Industry 4.0']
+                skills: ['AI Strategy', 'Data Analytics', 'Industry 4.0']
             },
             'outstanding-paper': {
                 title: 'InciT Outstanding Paper Award',
@@ -421,173 +415,126 @@ class AchievementDataManager {
                 category: 'certificate',
                 institution: 'Council of IT Deans in Thailand (CITT)',
                 grade: 'Outstanding Paper Award',
-                overview: 'Recognition for exceptional research paper presented at the national academic conference. The paper focused on innovative approaches to IoT security in smart city applications.',
+                overview: 'Research in AI deep learning model for reducing the environmental noise.',
                 subjects: [
-                    'IoT Security Frameworks',
-                    'Smart City Infrastructure',
-                    'Cybersecurity in Connected Devices',
-                    'Privacy-Preserving Technologies',
-                    'Network Security Protocols'
+                    'Artificial Intelligence in signal processing',
                 ],
                 achievements: [
-                    'Selected from 200+ submitted papers',
-                    'Presented at national conference with 500+ attendees',
-                    'Published in conference proceedings',
-                    'Invited for follow-up research collaboration',
-                    'Featured in university newsletter'
+                    'Enter IEEE Xplore Digital Library',
                 ],
-                skills: ['Research Methodology', 'Academic Writing', 'IoT Security', 'Conference Presentation', 'Peer Review']
+                skills: ['Research Methodology', 'Academic Writing', 'AI', 'Conference Presentation', 'Digital Signal Processing'],
+                publications: [
+                    {
+                        title: 'Adaptive Noise Cancellation Using a Fully Connected Network: A Lesson Learned',
+                        year: 2023,
+                        link: 'https://ieeexplore.ieee.org/document/10067499'
+                    }
+                ]
             },
             // Professional Experiences
-            'web-developer-intern': {
+            'service-engineer-intern': {
                 title: 'Service Engineer Intern',
-                completed: 'August 2023',
+                completed: 'June 2022 - August 2022',
                 type: 'Professional Experience',
                 category: 'experience',
                 institution: 'AIT Service Co.,LTD.',
-                duration: '15 months (June 2022 - August 2023)',
-                overview: 'Hands-on internship experience in service engineering and web development. Worked closely with senior engineers on client projects and internal tools.',
+                duration: '2 months (June 2022 - August 2022)',
+                overview: 'Designing and prototyping several projects. Also troubleshooting and maintaining electrical equipments.',
                 responsibilities: [
-                    'Developed responsive web applications using React and Node.js',
-                    'Collaborated with engineering teams on service optimization',
-                    'Participated in code reviews and team meetings',
-                    'Implemented service monitoring and maintenance tools',
-                    'Tested and debugged applications across multiple platforms',
-                    'Contributed to technical documentation'
+                    'Designed and prototyped conveyer belt projects',
+                    'Designed electrical plan for building',
+                    'Assisted in troubleshooting electrical equipments',
+                    'Customer interaction and support'
                 ],
                 achievements: [
-                    'Successfully delivered 5 client projects on time',
-                    'Improved service efficiency by 30%',
-                    'Received excellent performance review',
-                    'Extended internship due to outstanding performance',
-                    'Mentored 2 new interns in final month'
+                    'Successfully create 3 prototype using solidworks',
+                    'The prototypes were used in real-world applications',
+                    'Fixed many electrical equipments'
                 ],
-                skills: ['React.js', 'Node.js', 'JavaScript', 'Service Engineering', 'Git', 'Agile Development', 'Technical Documentation']
+                skills: ['solidworks', 'electrical troubleshooting', 'customer support', 'communication']
             },
-            'teaching-assistant': {
-                title: 'Teaching Assistant',
-                completed: 'November 2022',
-                type: 'Academic Position',
-                category: 'experience',
-                institution: 'UNSW Sydney',
-                duration: '1 semester (July - November 2022)',
-                overview: 'Teaching assistant role for undergraduate web development and database courses. Responsible for tutorial sessions, assignment marking, and student support.',
-                responsibilities: [
-                    'Conducted weekly tutorial sessions for 25+ students',
-                    'Assisted students with web development and database assignments',
-                    'Marked assignments and provided constructive feedback',
-                    'Held office hours for individual student consultations',
-                    'Supported course coordinator with curriculum development',
-                    'Supervised practical lab sessions'
-                ],
-                achievements: [
-                    'Received 4.8/5.0 student evaluation rating',
-                    'Helped improve course pass rate by 15%',
-                    'Developed supplementary learning materials',
-                    'Recognized for outstanding teaching contribution',
-                    'Invited to continue role in following semester'
-                ],
-                skills: ['Teaching', 'Web Development', 'Database Systems', 'Student Mentoring', 'Curriculum Design', 'Communication']
-            },
-            'freelance-developer': {
-                title: 'Freelance Web Developer',
+            'shop-assistant': {
+                title: 'Shop Assistant',
                 completed: 'Ongoing',
-                type: 'Self-Employment',
+                type: 'Part-Time Position',
                 category: 'experience',
-                institution: 'Independent Contractor',
-                duration: '3+ years (2020 - Present)',
-                overview: 'Independent web development services for various clients including small businesses, startups, and individuals. Specializing in modern web technologies and responsive design.',
+                institution: 'Walsh Bay Local',
+                duration: 'Ongoing',
+                overview: 'Shop assistant role responsible for customer service, inventory management, and sales support.',
                 responsibilities: [
-                    'Built custom websites and web applications for diverse clients',
-                    'Provided ongoing maintenance and support services',
-                    'Consulted on technology stack selection and architecture',
-                    'Managed project timelines and client communications',
-                    'Implemented e-commerce solutions and payment integrations',
-                    'Optimized websites for performance and SEO'
+                    'Provided excellent customer service and assistance',
+                    'Managed inventory and restocked shelves',
+                    'Assisted customers with product selection and inquiries',
+                    'Processed transactions and handled cash register',
+                    'Maintained cleanliness and organization of the store',
+                    'Collaborated with team members to achieve sales targets'
                 ],
-                achievements: [
-                    'Successfully completed 25+ projects',
-                    'Maintained 98% client satisfaction rate',
-                    'Built recurring revenue stream through maintenance contracts',
-                    'Expanded client base through referrals',
-                    'Developed expertise in multiple technology stacks'
-                ],
-                skills: ['Full-Stack Development', 'Client Management', 'Project Planning', 'WordPress', 'E-commerce', 'SEO']
+                achievements: [],
+                skills: ['Customer Service', 'Sales', 'Inventory Management', 'Communication', 'Teamwork']
             },
             // Projects
-            ecommerce: {
-                title: 'E-Commerce Platform',
-                completed: 'December 2022',
-                type: 'Full-Stack Application',
+            'conference-management': {
+                title: 'Conference Management Application',
+                completed: 'May 2025',
+                type: 'Web Application with Mobile App for attendees',
                 category: 'project',
-                github: 'https://github.com/yourusername/ecommerce-project',
-                demo: 'https://demo-ecommerce.yoursite.com',
-                overview: 'This e-commerce platform was developed as my final project for the Web Development course at UNSW. It\'s a fully functional online store with product listings, user authentication, shopping cart, and payment processing capabilities.',
+                github: 'This project is private',
+                demo: '-- No demo available for this project --',
+                overview: 'This conference management application was developed as my final project for the Web Development course at UNSW. It\'s a fully functional platform for managing conference events, including attendee registration, session management, and speaker management.',
                 technologies: [
-                    'Frontend: React, Redux, CSS Modules',
-                    'Backend: Node.js, Express, MongoDB',
-                    'Authentication: JWT, bcrypt',
-                    'Payment Processing: Stripe API',
-                    'Deployment: AWS EC2, Nginx'
+                    'Frontend: React, dashboard, CSS Modules',
+                    'Backend: Python, SQLite, Redis, MongoDB',
+                    'Authentication: JWT',
+                    'Payment Processing: -',
+                    'Deployment: Docker'
                 ],
                 features: [
                     'Responsive design for all device sizes',
                     'User authentication and profile management',
-                    'Product search and filtering',
-                    'Shopping cart functionality',
-                    'Secure checkout process',
-                    'Order history and tracking',
-                    'Admin dashboard for inventory management'
+                    'Session scheduling and management',
+                    'Speaker management and tracking',
+                    'Real-time notifications and updates',
+                    'Analytics dashboard for event organizers',
+                    'Real-time analytics and reporting',
+                    'Filtering and sorting of sessions',
                 ]
             },
             chatbot: {
                 title: 'AI Chatbot',
                 completed: 'September 2023',
                 type: 'Machine Learning Project',
-                category: 'project',
-                github: 'https://github.com/yourusername/ai-chatbot',
-                demo: 'https://chatbot-demo.yoursite.com',
-                overview: 'An intelligent chatbot built using natural language processing techniques. The bot can understand user queries and provide relevant responses based on trained models.',
+                category: 'Hackathon Project',
+                github: 'https://github.com/Min1471/Terrible_Idea',
+                demo: '-- No demo available for this project --',
+                overview: 'An AI chatbot using natural language processing to understand and respond to users in a funny way as a co-presenter in meetings.',
                 technologies: [
                     'Language: Python',
-                    'Framework: TensorFlow, NLTK',
-                    'Database: PostgreSQL',
-                    'API: Flask REST API',
-                    'Frontend: React, Socket.io'
+                    'AI: HuggingFace Transformers'
                 ],
                 features: [
                     'Natural language understanding',
                     'Real-time conversation',
-                    'Context awareness',
-                    'Multi-language support',
-                    'Intent recognition',
-                    'Entity extraction',
-                    'Conversation history'
                 ]
             },
             dashboard: {
-                title: 'Data Visualization Dashboard',
-                completed: 'June 2023',
-                type: 'Interactive Analytics Tool',
+                title: 'Emotional Classification Study using Various Machine Learning and Deep Learning Methods',
+                completed: 'Aug 2024',
+                type: 'Machine Learning Project',
                 category: 'project',
-                github: 'https://github.com/yourusername/data-dashboard',
-                demo: 'https://dashboard-demo.yoursite.com',
-                overview: 'A comprehensive data visualization dashboard that allows users to explore and analyze large datasets through interactive charts and graphs.',
+                github: 'https://github.com/Min1471/Emotional-Classification-Study-using-Various-Machine-Learning-and-Deep-Learning-Methods',
+                demo: '-- No demo available for this project --',
+                overview: 'Using various machine learning and deep learning methods to classify emotions in text data.',
                 technologies: [
-                    'Frontend: Vue.js, D3.js',
-                    'Visualization: Chart.js, Plotly',
-                    'Backend: Python, FastAPI',
-                    'Database: MongoDB, Redis',
-                    'Deployment: Docker, Kubernetes'
+                    'Language: Python',
+                    'Libraries: scikit-learn, TensorFlow, Keras, NLTK',
+                    'Models: Logistic Regression, SVM, Random Forest, GRU, LSTM, Bi-GRU, Bi-LSTM, BERT'
                 ],
                 features: [
-                    'Interactive data visualizations',
-                    'Real-time data updates',
-                    'Custom chart creation',
-                    'Data filtering and sorting',
-                    'Export functionality',
-                    'Responsive design',
-                    'Multi-user collaboration'
+                    'Data preprocessing and cleaning',
+                    'Feature extraction using TF-IDF and word embeddings',
+                    'Model training and evaluation',
+                    'Hyperparameter tuning',
+                    'Performance comparison of different models'
                 ]
             }
         };
@@ -613,6 +560,12 @@ class SidebarContentRenderer {
 
         content += this.renderOverview(achievement);
         content += this.renderCategorySpecificSections(achievement);
+
+        // Add publications section if available
+        if (achievement.publications) {
+            content += this.renderPublicationsSection(achievement);
+        }
+
         content += this.renderSkillsSection(achievement);
 
         if (achievement.category === 'project') {
@@ -754,6 +707,32 @@ class SidebarContentRenderer {
                 <h4>Skills Developed/Used</h4>
                 <div class="skills-tags">
                     ${achievement.skills.map(skill => `<span class="skill-badge">${skill}</span>`).join('')}
+                </div>
+            </div>
+        `;
+    }
+
+    static renderPublicationsSection(achievement) {
+        return `
+            <div class="project-section">
+                <h4>📚 Publications</h4>
+                <div class="publications-list">
+                    ${achievement.publications.map(pub => `
+                        <div class="publication-item">
+                            <div class="publication-title">
+                                <a href="${pub.link}" target="_blank" rel="noopener noreferrer">
+                                    ${pub.title}
+                                </a>
+                            </div>
+                            <div class="publication-year">${pub.year}</div>
+                            <div class="publication-link">
+                                <a href="${pub.link}" target="_blank" rel="noopener noreferrer" class="external-link">
+                                    <span class="link-icon">🔗</span>
+                                    <span class="link-text">View Paper</span>
+                                </a>
+                            </div>
+                        </div>
+                    `).join('')}
                 </div>
             </div>
         `;

@@ -936,6 +936,96 @@ textarea.form-control {
     }
 }
 
+/* Publications Section Styles */
+.publications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.publication-item {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    border-left: 4px solid #667eea;
+    transition: all 0.3s ease;
+}
+
+.publication-item:hover {
+    background: #e9ecef;
+    transform: translateX(5px);
+}
+
+.publication-title {
+    margin-bottom: 0.5rem;
+}
+
+.publication-title a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    display: block;
+}
+
+.publication-title a:hover {
+    color: #667eea;
+    text-decoration: underline;
+}
+
+.publication-year {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+}
+
+.publication-link {
+    margin-top: 0.75rem;
+}
+
+.publication-link .external-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #667eea;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border: 1px solid #667eea;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.publication-link .external-link:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.publication-link .link-icon {
+    font-size: 0.9rem;
+}
+
+/* Responsive design for publications */
+@media (max-width: 768px) {
+    .publication-item {
+        padding: 1rem;
+    }
+
+    .publication-title a {
+        font-size: 1rem;
+    }
+
+    .publication-link .external-link {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
 footer {
     background: #333;
     color: #fff;
