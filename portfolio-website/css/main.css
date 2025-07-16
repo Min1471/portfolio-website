@@ -672,6 +672,270 @@ textarea.form-control {
     }
 }
 
+/* Project Sidebar Styles */
+.project-sidebar {
+    position: fixed;
+    top: 0;
+    right: -500px;
+    width: 500px;
+    height: 100vh;
+    background: white;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+}
+
+.project-sidebar.active {
+    right: 0;
+}
+
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    background: #f8f9fa;
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.4rem;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    padding: 5px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.close-btn:hover {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.sidebar-content {
+    padding: 20px;
+}
+
+.sidebar-content .project-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.sidebar-content .project-date,
+.sidebar-content .project-type,
+.sidebar-content .project-institution,
+.sidebar-content .project-grade,
+.sidebar-content .project-duration {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.sidebar-content .project-type {
+    font-weight: 600;
+    color: #0066cc;
+}
+
+.sidebar-content .project-institution {
+    font-weight: 500;
+    color: #333;
+}
+
+.sidebar-content .project-grade {
+    font-weight: 600;
+    color: #4caf50;
+}
+
+.sidebar-content .project-duration {
+    font-style: italic;
+    color: #777;
+}
+
+.sidebar-content .project-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.sidebar-content .project-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.sidebar-content .project-link.github {
+    background-color: #333;
+    color: white;
+}
+
+.sidebar-content .project-link.demo {
+    background-color: #0066cc;
+    color: white;
+}
+
+.sidebar-content .project-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar-content .project-section {
+    margin-bottom: 25px;
+}
+
+.sidebar-content .project-section h4 {
+    color: #333;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 8px;
+}
+
+.sidebar-content .project-section p {
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.sidebar-content .tech-list,
+.sidebar-content .features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-content .tech-list li {
+    background-color: #e3f2fd;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    border-left: 3px solid #0066cc;
+}
+
+.sidebar-content .features-list li {
+    background-color: #f0f8e7;
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    border-left: 3px solid #4caf50;
+    position: relative;
+}
+
+.sidebar-content .features-list li::before {
+    content: '✓';
+    color: #4caf50;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.sidebar-content .btn-primary {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 100%;
+}
+
+.sidebar-content .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+/* Skills badges for sidebar */
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.skill-badge {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: center;
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile responsiveness for sidebar */
+@media (max-width: 768px) {
+    .project-sidebar {
+        width: 100%;
+        right: -100%;
+    }
+
+    .sidebar-header {
+        padding: 15px;
+    }
+
+    .sidebar-content {
+        padding: 15px;
+    }
+
+    .skills-tags {
+        gap: 6px;
+    }
+
+    .skill-badge {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+    }
+}
+
 footer {
     background: #333;
     color: #fff;

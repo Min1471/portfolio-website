@@ -49,31 +49,31 @@
                     <h3>Master of Information Technology</h3>
                     <p>UNSW, 2025</p>
                     <p>Specialized in data science and data engineer</p>
-                    <a href="achievements/masters-degree.html" class="btn btn-outline">View Details</a>
+                    <button class="btn btn-outline" data-achievement="masters-degree">View Details</button>
                 </div>
 
                 <div class="achievement-card">
                     <div class="achievement-icon">🎓</div>
-                    <h3>Bachelor of Electrical Engineer, First Class Hornors</h3>
+                    <h3>Bachelor of Electrical Engineer, First Class Honours</h3>
                     <p>Thammasat University, 2022</p>
                     <p>Specialized in electrical communication engineer</p>
-                    <a href="achievements/masters-degree.html" class="btn btn-outline">View Details</a>
+                    <button class="btn btn-outline" data-achievement="bachelors-degree">View Details</button>
                 </div>
 
                 <div class="achievement-card">
                     <div class="achievement-icon">🏆</div>
                     <h3>AI for business and industry training program 2021</h3>
                     <p>AMEICC (AEM-METI Economic and Industrial Cooperation Committee), 2022</p>
-                    <p>Training sessions for applying AI and machinelearning into business and industry </p>
-                    <a href="achievements/AI_training.html" class="btn btn-outline">View Certificate</a>
+                    <p>Training sessions for applying AI and machine learning into business and industry</p>
+                    <button class="btn btn-outline" data-achievement="ai-training">View Certificate</button>
                 </div>
 
                 <div class="achievement-card">
-                    <div class="achievement-icon">�</div>
+                    <div class="achievement-icon">🏅</div>
                     <h3>InciT outstanding paper</h3>
-                    <p> Council of IT Deans in Thailand (CITT), 2022</p>
-                    <p>Awareded for outstanding paper in the Academic conference</p>
-                    <a href="achievements/web-dev-certification.html" class="btn btn-outline">View Certificate</a>
+                    <p>Council of IT Deans in Thailand (CITT), 2022</p>
+                    <p>Awarded for outstanding paper in the Academic conference</p>
+                    <button class="btn btn-outline" data-achievement="outstanding-paper">View Certificate</button>
                 </div>
             </div>
         </section>
@@ -84,10 +84,10 @@
             <div class="achievement-cards">
                 <div class="achievement-card">
                     <div class="achievement-icon">💼</div>
-                    <h3>Web Developer Intern</h3>
-                    <p>XYZ Company, 2022-2023</p>
+                    <h3>Service Engineer Intern</h3>
+                    <p>AIT Service Co.,LTD., June 2022 - August 2023</p>
                     <p>Developed responsive web applications using React and Node.js</p>
-                    <a href="achievements/xyz-internship.html" class="btn btn-outline">View Experience</a>
+                    <button class="btn btn-outline" data-achievement="web-developer-intern">View Experience</button>
                 </div>
 
                 <div class="achievement-card">
@@ -95,7 +95,7 @@
                     <h3>Teaching Assistant</h3>
                     <p>UNSW, 2022</p>
                     <p>Assisted in teaching web development and database courses</p>
-                    <a href="achievements/teaching-assistant.html" class="btn btn-outline">View Experience</a>
+                    <button class="btn btn-outline" data-achievement="teaching-assistant">View Experience</button>
                 </div>
 
                 <div class="achievement-card">
@@ -103,7 +103,7 @@
                     <h3>Freelance Developer</h3>
                     <p>2020-Present</p>
                     <p>Built websites and applications for various clients</p>
-                    <a href="achievements/freelance-work.html" class="btn btn-outline">View Experience</a>
+                    <button class="btn btn-outline" data-achievement="freelance-developer">View Experience</button>
                 </div>
             </div>
         </section>
@@ -117,7 +117,7 @@
                     <h3>E-Commerce Platform</h3>
                     <p>Full-stack application</p>
                     <p>Built with React, Node.js, and MongoDB</p>
-                    <a href="achievements/ecommerce-project.html" class="btn btn-outline">View Project</a>
+                    <button class="btn btn-outline" data-project="ecommerce">View Project</button>
                 </div>
 
                 <div class="achievement-card">
@@ -125,7 +125,7 @@
                     <h3>AI Chatbot</h3>
                     <p>Machine learning project</p>
                     <p>Natural language processing using Python and TensorFlow</p>
-                    <a href="achievements/chatbot-project.html" class="btn btn-outline">View Project</a>
+                    <button class="btn btn-outline" data-project="chatbot">View Project</button>
                 </div>
 
                 <div class="achievement-card">
@@ -133,11 +133,25 @@
                     <h3>Data Visualization Dashboard</h3>
                     <p>Interactive analytics tool</p>
                     <p>Created with D3.js and Vue.js</p>
-                    <a href="achievements/dashboard-project.html" class="btn btn-outline">View Project</a>
+                    <button class="btn btn-outline" data-project="dashboard">View Project</button>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- Project Details Sidebar -->
+    <div id="project-sidebar" class="project-sidebar">
+        <div class="sidebar-header">
+            <h3 id="sidebar-title">Project Details</h3>
+            <button id="close-sidebar" class="close-btn">&times;</button>
+        </div>
+        <div id="sidebar-content" class="sidebar-content">
+            <!-- Content will be loaded dynamically -->
+        </div>
+    </div>
+
+    <!-- Sidebar Overlay -->
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
 
     <footer>
     </footer>
