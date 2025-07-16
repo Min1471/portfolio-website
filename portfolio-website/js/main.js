@@ -503,7 +503,7 @@ class AchievementDataManager {
                 title: 'AI Chatbot',
                 completed: 'September 2023',
                 type: 'Machine Learning Project',
-                category: 'Hackathon Project',
+                category: 'project',
                 github: 'https://github.com/Min1471/Terrible_Idea',
                 demo: '-- No demo available for this project --',
                 overview: 'An AI chatbot using natural language processing to understand and respond to users in a funny way as a co-presenter in meetings.',
@@ -516,7 +516,7 @@ class AchievementDataManager {
                     'Real-time conversation',
                 ]
             },
-            dashboard: {
+            emotion: {
                 title: 'Emotional Classification Study using Various Machine Learning and Deep Learning Methods',
                 completed: 'Aug 2024',
                 type: 'Machine Learning Project',
