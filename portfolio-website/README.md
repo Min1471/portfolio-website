@@ -1,6 +1,6 @@
 # Portfolio Website
 
-This is a personal portfolio website created to showcase the achievements and contact information of a Master of IT graduate from UNSW. The website is designed to provide a professional online presence and highlight academic and professional accomplishments.
+This is my personal portfolio website created to showcase the achievements and contact information of a Master of IT graduate from UNSW.
 
 ## Project Structure
 
