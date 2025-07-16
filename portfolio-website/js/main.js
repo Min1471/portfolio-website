@@ -568,10 +568,6 @@ class SidebarContentRenderer {
 
         content += this.renderSkillsSection(achievement);
 
-        if (achievement.category === 'project') {
-            content += this.renderProjectActionButton();
-        }
-
         return content;
     }
 
@@ -734,16 +730,6 @@ class SidebarContentRenderer {
                         </div>
                     `).join('')}
                 </div>
-            </div>
-        `;
-    }
-
-    static renderProjectActionButton() {
-        return `
-            <div class="project-section">
-                <a href="achievements/project.html" class="btn btn-primary" target="_blank">
-                    View Full Project Details
-                </a>
             </div>
         `;
     }
