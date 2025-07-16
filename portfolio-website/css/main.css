@@ -814,6 +814,11 @@ textarea.form-control {
     color: white;
 }
 
+.sidebar-content .project-link.ieee {
+    background-color: #875cc6;
+    color: white;
+}
+
 .sidebar-content .project-link:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);

@@ -552,6 +552,14 @@ class AchievementDataManager {
                     'Real-time audio processing',
                     'Adaptive filtering techniques',
                     'Performance evaluation against Thai and English Language'
+                ],
+                skills: ['MATLAB', 'Signal Processing', 'Neural Networks', 'Audio Processing', 'Research Methodology'],
+                publications: [
+                    {
+                        title: 'Adaptive Noise Cancellation Using a Fully Connected Network: A Lesson Learned',
+                        year: 2023,
+                        link: 'https://ieeexplore.ieee.org/document/10067499'
+                    }
                 ]
             }
         };
@@ -601,16 +609,59 @@ class SidebarContentRenderer {
     }
 
     static renderProjectLinks(achievement) {
-        return `
-            <div class="project-links">
+        const hasValidGithub = achievement.github &&
+            achievement.github.startsWith('http') &&
+            !achievement.github.includes('This project is private') &&
+            !achievement.github.includes('No GitHub repository available');
+
+        const hasValidDemo = achievement.demo &&
+            achievement.demo.startsWith('http') &&
+            !achievement.demo.includes('No demo available');
+
+        // Check if this is the adaptive noise cancellation project with IEEE publication
+        const hasIEEEPublication = achievement.publications &&
+            achievement.publications.length > 0 &&
+            achievement.publications[0].link &&
+            achievement.publications[0].link.includes('ieeexplore.ieee.org');
+
+        // Only render the section if there's at least one valid link or IEEE publication
+        if (!hasValidGithub && !hasValidDemo && !hasIEEEPublication) {
+            return '';
+        }
+
+        let linksHtml = '';
+
+        if (hasValidGithub) {
+            linksHtml += `
                 <a href="${achievement.github}" target="_blank" class="project-link github">
                     <span class="link-icon">🔗</span>
                     <span class="link-text">GitHub Repository</span>
                 </a>
+            `;
+        }
+
+        if (hasValidDemo) {
+            linksHtml += `
                 <a href="${achievement.demo}" target="_blank" class="project-link demo">
                     <span class="link-icon">🌐</span>
                     <span class="link-text">Live Demo</span>
                 </a>
+            `;
+        }
+
+        // Add IEEE publication link for adaptive noise cancellation project
+        if (hasIEEEPublication) {
+            linksHtml += `
+                <a href="${achievement.publications[0].link}" target="_blank" class="project-link ieee">
+                    <span class="link-icon">📚</span>
+                    <span class="link-text">IEEE Publication</span>
+                </a>
+            `;
+        }
+
+        return `
+            <div class="project-links">
+                ${linksHtml}
             </div>
         `;
     }
