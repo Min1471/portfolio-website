@@ -439,21 +439,21 @@
     <!-- Fallback for animations -->
     <script>
         // Ensure content is visible even if main animation script fails
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Add fallback class for graceful degradation
             document.body.classList.add('animations-ready');
-            
+
             // Simple fallback to ensure About section is visible
-            setTimeout(function() {
+            setTimeout(function () {
                 const aboutSection = document.getElementById('about');
                 if (aboutSection) {
                     aboutSection.style.opacity = '1';
                     aboutSection.style.transform = 'none';
                 }
-                
+
                 // Make sure all animated elements are visible as fallback
                 const animatedElements = document.querySelectorAll('[class*="animate-"]');
-                animatedElements.forEach(function(el) {
+                animatedElements.forEach(function (el) {
                     if (!el.classList.contains('animate-in')) {
                         el.style.opacity = '1';
                         el.style.transform = 'none';

@@ -9,7 +9,7 @@ class PortfolioAnimations {
     init() {
         // Add js-enabled class to enable animations
         document.body.classList.add('js-enabled');
-        
+
         this.setupScrollAnimations();
         this.setupParticleSystem();
         this.setupTypewriterEffect();

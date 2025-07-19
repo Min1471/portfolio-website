@@ -265,7 +265,8 @@
 
 /* Animation Utility Classes */
 .animate-on-scroll {
-    opacity: 1; /* Default to visible for fallback */
+    opacity: 1;
+    /* Default to visible for fallback */
     transform: translateY(60px);
     transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -281,7 +282,8 @@
 }
 
 .animate-fade-in-left {
-    opacity: 1; /* Default to visible for fallback */
+    opacity: 1;
+    /* Default to visible for fallback */
     transform: translateX(-60px);
     transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -297,7 +299,8 @@
 }
 
 .animate-fade-in-right {
-    opacity: 1; /* Default to visible for fallback */
+    opacity: 1;
+    /* Default to visible for fallback */
     transform: translateX(60px);
     transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -313,7 +316,8 @@
 }
 
 .animate-scale-in {
-    opacity: 1; /* Default to visible for fallback */
+    opacity: 1;
+    /* Default to visible for fallback */
     transform: scale(0.8);
     transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -846,8 +850,10 @@ header[data-bg="light"] {
     padding: 120px 0;
     background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-warm) 100%);
     position: relative;
-    opacity: 1 !important; /* Ensure About section is always visible */
-    transform: none !important; /* Override any transform that might hide it */
+    opacity: 1 !important;
+    /* Ensure About section is always visible */
+    transform: none !important;
+    /* Override any transform that might hide it */
 }
 
 .about-card {
@@ -860,7 +866,8 @@ header[data-bg="light"] {
     box-shadow: var(--glass-shadow);
     position: relative;
     overflow: hidden;
-    opacity: 1 !important; /* Ensure About card is always visible */
+    opacity: 1 !important;
+    /* Ensure About card is always visible */
 }
 
 .about-card::before {
