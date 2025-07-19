@@ -1,60 +1,38 @@
 :root {
-    /* Cozy Book Reading Theme - Warm & Literary */
     --primary-color: #8B5A3C;
-    /* Warm brown like old book covers */
     --secondary-color: #A0785A;
-    /* Rich leather brown */
     --accent-color: #D4B996;
-    /* Cream paper color */
     --tertiary-color: #6B4423;
-    /* Dark chocolate brown */
     --dark-brown: #5D3A1A;
-    /* Deep espresso */
     --warm-brown: #9E7B5A;
-    /* Medium warm brown */
 
-    /* Text colors for readability */
     --text-dark: #3C2E26;
-    /* Dark brown text */
     --text-light: #8A7968;
-    /* Muted brown for secondary text */
     --text-warm: #6B5B4F;
-    /* Warm brown for content */
 
-    /* Background colors inspired by the cozy scene */
     --bg-light: #F5F2ED;
-    /* Warm cream like paper */
     --bg-secondary: #F0EBE3;
-    /* Slightly warmer cream */
     --bg-warm: #EDE6DB;
-    /* Warm beige */
     --bg-dark: #2A1F1A;
-    /* Dark brown for contrast */
 
-    /* Shadows with warm tones */
     --shadow-light: 0 4px 6px rgba(139, 90, 60, 0.1);
     --shadow-medium: 0 8px 25px rgba(139, 90, 60, 0.15);
     --shadow-heavy: 0 15px 35px rgba(139, 90, 60, 0.2);
 
-    /* Gradients for a cozy feel */
     --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     --gradient-accent: linear-gradient(135deg, var(--accent-color), var(--primary-color));
     --gradient-warm: linear-gradient(135deg, var(--secondary-color), var(--warm-brown));
     --gradient-cozy: linear-gradient(135deg, var(--bg-light), var(--bg-warm));
 
-    /* Glass effects with warm tones */
     --glass-primary: rgba(245, 242, 237, 0.85);
-    /* Warm glass effect */
     --glass-secondary: rgba(240, 235, 227, 0.75);
     --glass-tertiary: rgba(237, 230, 219, 0.65);
     --glass-border: rgba(139, 90, 60, 0.2);
-    /* Brown glass borders */
     --glass-highlight: rgba(212, 185, 150, 0.3);
     --glass-blur: blur(20px);
     --glass-shadow: 0 8px 32px rgba(139, 90, 60, 0.15);
     --glass-specular: linear-gradient(135deg, rgba(212, 185, 150, 0.3) 0%, rgba(139, 90, 60, 0.1) 50%, rgba(212, 185, 150, 0.2) 100%);
 
-    /* Adaptive Text Colors */
     --nav-text-light: rgba(245, 242, 237, 0.95);
     --nav-text-dark: rgba(60, 46, 38, 0.9);
     --nav-text-adaptive: var(--nav-text-dark);
@@ -62,7 +40,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* Apple Liquid Glass Animations */
 @keyframes liquidFlow {
 
     0%,
@@ -87,7 +64,6 @@
     }
 }
 
-/* Enhanced Animation Library */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -263,7 +239,6 @@
     }
 }
 
-/* Animation Utility Classes */
 .animate-on-scroll {
     opacity: 1;
     /* Default to visible for fallback */
@@ -271,7 +246,6 @@
     transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Only hide if JavaScript is enabled */
 .js-enabled .animate-on-scroll {
     opacity: 0;
 }
@@ -288,7 +262,6 @@
     transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Only hide if JavaScript is enabled */
 .js-enabled .animate-fade-in-left {
     opacity: 0;
 }
@@ -305,7 +278,6 @@
     transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Only hide if JavaScript is enabled */
 .js-enabled .animate-fade-in-right {
     opacity: 0;
 }
@@ -322,7 +294,6 @@
     transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Only hide if JavaScript is enabled */
 .js-enabled .animate-scale-in {
     opacity: 0;
 }
@@ -334,18 +305,6 @@
 
 .stagger-animation {
     animation-delay: calc(var(--stagger-delay, 0) * 0.1s);
-}
-
-/* Particle Background */
-.particles-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 1;
-    pointer-events: none;
 }
 
 .particle {
@@ -413,7 +372,6 @@
     animation: specularHighlight 3s ease-in-out infinite;
 }
 
-/* Global Styles */
 * {
     box-sizing: border-box;
 }
@@ -421,7 +379,6 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
-    /* Account for fixed navigation */
 }
 
 body {
@@ -433,10 +390,8 @@ body {
     overflow-x: hidden;
 }
 
-/* Basic layout styles */
 main {
     padding-top: 80px;
-    /* Account for fixed header */
 }
 
 section {

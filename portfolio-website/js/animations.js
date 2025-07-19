@@ -1,4 +1,3 @@
-// Advanced Animation System for Portfolio
 class PortfolioAnimations {
     constructor() {
         this.observers = [];
@@ -7,7 +6,6 @@ class PortfolioAnimations {
     }
 
     init() {
-        // Add js-enabled class to enable animations
         document.body.classList.add('js-enabled');
 
         this.setupScrollAnimations();
@@ -21,9 +19,7 @@ class PortfolioAnimations {
         this.addAnimationClasses();
     }
 
-    // Add animation classes to elements
     addAnimationClasses() {
-        // Add scroll animation classes
         const animateElements = [
             { selector: '.about-card', class: 'animate-on-scroll' },
             { selector: '.about-image img', class: 'animate-fade-in-left' },
@@ -46,7 +42,6 @@ class PortfolioAnimations {
         });
     }
 
-    // Setup Intersection Observer for scroll animations
     setupScrollAnimations() {
         const observerOptions = {
             threshold: 0.1,
@@ -77,7 +72,6 @@ class PortfolioAnimations {
         this.observers.push(observer);
     }
 
-    // Setup particle system for hero section
     setupParticleSystem() {
         const heroSection = document.getElementById('hero');
         if (!heroSection) return;
@@ -116,7 +110,6 @@ class PortfolioAnimations {
         this.particles.push(particle);
     }
 
-    // Setup typewriter effect for hero subtitle
     setupTypewriterEffect() {
         const subtitle = document.querySelector('.hero-content h2');
         if (!subtitle) return;
@@ -139,11 +132,9 @@ class PortfolioAnimations {
             }
         };
 
-        // Start typewriter effect after initial animation
         setTimeout(typeWriter, 800);
     }
 
-    // Setup staggered animations for grid items
     setupStaggeredAnimations() {
         const animateStaggeredElements = () => {
             document.querySelectorAll('.tech-grid .tech-item').forEach((item, index) => {
@@ -169,7 +160,6 @@ class PortfolioAnimations {
         }
     }
 
-    // Enhanced hover effects
     setupHoverEffects() {
         // Add magnetic effect to buttons
         document.querySelectorAll('.btn').forEach(btn => {
@@ -245,7 +235,6 @@ class PortfolioAnimations {
         }, 600);
     }
 
-    // Parallax effect for hero section
     setupParallaxEffect() {
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
