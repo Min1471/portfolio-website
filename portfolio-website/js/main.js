@@ -1,33 +1,38 @@
-// Portfolio Website JavaScript - Clean Object-Oriented Version
+// Single Page Portfolio Application JavaScript
 
 // Application initialization
 document.addEventListener('DOMContentLoaded', function () {
     const portfolioApp = new PortfolioApp();
-    portfolioApp.init();
 });
 
 // Main Portfolio Application Class
 class PortfolioApp {
     constructor() {
         this.components = [];
+        this.init();
     }
 
     init() {
-        // Initialize all components
+        // Initialize all components for single-page application
         this.components = [
-            new SmoothScrolling(),
-            new MobileNavigation(),
-            new TabSwitching(),
-            new ScrollAnimations(),
+            new SinglePageNavigation(),
+            new AchievementTabs(),
+            new AchievementSidebar(),
             new ContactForm(),
-            new SkillsAnimation(),
-            new AchievementSidebar()
+            new ScrollAnimations(),
+            new MobileNavigation()
         ];
 
+        console.log('Initializing components:', this.components.length);
+
         // Initialize each component
-        this.components.forEach(component => {
+        this.components.forEach((component, index) => {
+            console.log(`Checking component ${index}:`, component.constructor.name, 'Available:', component.isAvailable());
             if (component.isAvailable()) {
                 component.init();
+                console.log(`Initialized component:`, component.constructor.name);
+            } else {
+                console.log(`Skipped component:`, component.constructor.name);
             }
         });
 
@@ -50,6 +55,119 @@ class PortfolioApp {
             this.components.forEach(component => {
                 if (component.onKeydown) {
                     component.onKeydown(e);
+                }
+            });
+        });
+    }
+}
+
+// Single Page Navigation Component
+class SinglePageNavigation extends Component {
+    constructor() {
+        super();
+    }
+
+    isAvailable() {
+        return document.querySelector('nav a[href^="#"]') !== null;
+    }
+
+    setup() {
+        this.setupSmoothScrolling();
+        this.setupActiveNavigation();
+    }
+
+    setupSmoothScrolling() {
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    }
+
+    setupActiveNavigation() {
+        // Update active navigation based on scroll position
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    
+                    // Remove active class from all nav links
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    
+                    // Add active class to current section's nav link
+                    const activeLink = document.querySelector(`nav a[href="#${id}"]`);
+                    if (activeLink) {
+                        activeLink.classList.add('active');
+                    }
+                }
+            });
+        }, {
+            rootMargin: '-20% 0px -70% 0px'
+        });
+
+        sections.forEach(section => observer.observe(section));
+    }
+}
+
+// Achievement Tabs Component
+class AchievementTabs extends Component {
+    constructor() {
+        super();
+    }
+
+    isAvailable() {
+        return document.querySelector('.category-tabs') !== null;
+    }
+
+    setup() {
+        this.setupTabSwitching();
+    }
+
+    setupTabSwitching() {
+        const categoryTabs = document.querySelectorAll('.category-tabs li');
+        const achievementSections = document.querySelectorAll('.achievement-section');
+
+        console.log('Setting up achievement tabs:', categoryTabs.length, 'tabs found');
+        console.log('Achievement sections found:', achievementSections.length);
+
+        categoryTabs.forEach((tab, index) => {
+            console.log(`Tab ${index}:`, tab.textContent, 'data-target:', tab.getAttribute('data-target'));
+            
+            tab.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = tab.getAttribute('data-target');
+                console.log('Tab clicked:', target);
+                
+                // Remove active class from all tabs
+                categoryTabs.forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                tab.classList.add('active');
+                
+                // Hide all achievement sections
+                achievementSections.forEach(section => {
+                    section.classList.remove('active-section');
+                });
+                
+                // Show target section
+                const targetSection = document.getElementById(target);
+                if (targetSection) {
+                    targetSection.classList.add('active-section');
+                    console.log('Showing section:', target);
+                } else {
+                    console.error('Target section not found:', target);
                 }
             });
         });
@@ -234,6 +352,10 @@ class ScrollAnimations extends Component {
 
 // Contact Form Component
 class ContactForm extends Component {
+    constructor() {
+        super();
+    }
+
     isAvailable() {
         return document.querySelector('#contact-form') !== null;
     }
@@ -897,3 +1019,43 @@ class AchievementSidebar extends Component {
         }
     }
 }
+
+// Debug: Simple test to verify JavaScript is loading
+console.log('✅ JavaScript file loaded successfully');
+
+// Debug: Test tab functionality manually
+window.testTabs = function() {
+    const tabs = document.querySelectorAll('.category-tabs li');
+    const sections = document.querySelectorAll('.achievement-section');
+    console.log('📋 Tabs found:', tabs.length);
+    console.log('📄 Sections found:', sections.length);
+    
+    tabs.forEach((tab, index) => {
+        console.log(`Tab ${index}: "${tab.textContent.trim()}" -> data-target="${tab.getAttribute('data-target')}"`);
+    });
+    
+    sections.forEach((section, index) => {
+        console.log(`Section ${index}: id="${section.id}" active="${section.classList.contains('active-section')}"`);
+    });
+};
+
+// Debug: Test button functionality manually
+window.testButtons = function() {
+    const buttons = document.querySelectorAll('[data-achievement], [data-project]');
+    console.log('🔘 Achievement/Project buttons found:', buttons.length);
+    
+    buttons.forEach((button, index) => {
+        const achievement = button.getAttribute('data-achievement');
+        const project = button.getAttribute('data-project');
+        console.log(`Button ${index}: "${button.textContent.trim()}" -> ${achievement || project}`);
+    });
+};
+
+// Run tests after DOM loads
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(() => {
+        console.log('🧪 Running manual tests...');
+        if (window.testTabs) window.testTabs();
+        if (window.testButtons) window.testButtons();
+    }, 1000);
+});
