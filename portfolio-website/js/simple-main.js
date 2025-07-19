@@ -2,21 +2,21 @@
 
 console.log('🚀 Simplified Portfolio JS loaded');
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     console.log('🚀 DOM loaded, initializing portfolio...');
-    
+
     // Initialize Achievement Tabs
     initAchievementTabs();
-    
+
     // Initialize Achievement Buttons  
     initAchievementButtons();
-    
+
     // Initialize Smooth Scrolling
     initSmoothScrolling();
-    
+
     // Initialize Contact Form
     initContactForm();
-    
+
     console.log('✅ Portfolio initialization complete');
 });
 
@@ -24,19 +24,19 @@ document.addEventListener('DOMContentLoaded', function() {
 function initAchievementTabs() {
     const tabs = document.querySelectorAll('.category-tabs li');
     const sections = document.querySelectorAll('.achievement-section');
-    
+
     console.log('📋 Initializing achievement tabs:', tabs.length);
-    
+
     tabs.forEach(tab => {
-        tab.addEventListener('click', function(e) {
+        tab.addEventListener('click', function (e) {
             e.preventDefault();
             const target = tab.getAttribute('data-target');
             console.log('🖱️ Tab clicked:', target);
-            
+
             // Update tab states
             tabs.forEach(t => t.classList.remove('active'));
             tab.classList.add('active');
-            
+
             // Update section visibility
             sections.forEach(s => s.classList.remove('active-section'));
             const targetSection = document.getElementById(target);
@@ -52,14 +52,14 @@ function initAchievementTabs() {
 function initAchievementButtons() {
     const buttons = document.querySelectorAll('[data-achievement], [data-project]');
     console.log('🔘 Initializing achievement buttons:', buttons.length);
-    
+
     buttons.forEach(button => {
-        button.addEventListener('click', function(e) {
+        button.addEventListener('click', function (e) {
             e.preventDefault();
             const achievement = button.getAttribute('data-achievement');
             const project = button.getAttribute('data-project');
             const key = achievement || project;
-            
+
             console.log('🖱️ Achievement button clicked:', key);
             showAchievementSidebar(key);
         });
@@ -72,27 +72,27 @@ function showAchievementSidebar(key) {
     const overlay = document.getElementById('sidebar-overlay');
     const title = document.getElementById('sidebar-title');
     const content = document.getElementById('sidebar-content');
-    
+
     if (!sidebar || !overlay || !title || !content) {
         console.error('❌ Sidebar elements not found');
         return;
     }
-    
+
     // Get achievement data
     const data = getAchievementData(key);
     if (!data) {
         console.error('❌ No data found for:', key);
         return;
     }
-    
+
     // Update sidebar content
     title.textContent = data.title;
     content.innerHTML = generateSidebarContent(data);
-    
+
     // Show sidebar
     sidebar.classList.add('active');
     overlay.classList.add('active');
-    
+
     console.log('✅ Sidebar shown for:', key);
 }
 
@@ -100,26 +100,26 @@ function showAchievementSidebar(key) {
 function closeSidebar() {
     const sidebar = document.getElementById('project-sidebar');
     const overlay = document.getElementById('sidebar-overlay');
-    
+
     if (sidebar) sidebar.classList.remove('active');
     if (overlay) overlay.classList.remove('active');
 }
 
 // Initialize sidebar close handlers
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const closeBtn = document.getElementById('close-sidebar');
     const overlay = document.getElementById('sidebar-overlay');
-    
+
     if (closeBtn) {
         closeBtn.addEventListener('click', closeSidebar);
     }
-    
+
     if (overlay) {
         overlay.addEventListener('click', closeSidebar);
     }
-    
+
     // ESC key to close
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') {
             closeSidebar();
         }
@@ -130,13 +130,13 @@ document.addEventListener('DOMContentLoaded', function() {
 function initSmoothScrolling() {
     const navLinks = document.querySelectorAll('nav a[href^="#"]');
     console.log('🔗 Initializing smooth scrolling:', navLinks.length);
-    
+
     navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = link.getAttribute('href');
             const targetSection = document.querySelector(targetId);
-            
+
             if (targetSection) {
                 targetSection.scrollIntoView({
                     behavior: 'smooth',
@@ -151,29 +151,29 @@ function initSmoothScrolling() {
 function initContactForm() {
     const form = document.getElementById('contact-form');
     if (!form) return;
-    
+
     console.log('📧 Initializing contact form');
-    
-    form.addEventListener('submit', function(e) {
+
+    form.addEventListener('submit', function (e) {
         e.preventDefault();
-        
+
         const formData = new FormData(form);
         const name = formData.get('name');
         const email = formData.get('email');
         const message = formData.get('message');
-        
+
         if (!name || !email || !message) {
             alert('Please fill in all fields');
             return;
         }
-        
+
         // Simple email validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
             alert('Please enter a valid email address');
             return;
         }
-        
+
         alert('Thank you for your message! I\'ll get back to you soon.');
         form.reset();
     });
@@ -331,14 +331,14 @@ function getAchievementData(key) {
             ieee: 'https://ieeexplore.ieee.org/document/your-paper-id'
         }
     };
-    
+
     return data[key] || null;
 }
 
 // Generate sidebar content HTML
 function generateSidebarContent(data) {
     let html = '';
-    
+
     // Meta information
     html += '<div class="project-meta">';
     if (data.type) html += `<div class="project-type">${data.type}</div>`;
@@ -347,7 +347,7 @@ function generateSidebarContent(data) {
     if (data.duration) html += `<div class="project-duration">${data.duration}</div>`;
     if (data.grade) html += `<div class="project-grade">${data.grade}</div>`;
     html += '</div>';
-    
+
     // Links
     if (data.github || data.demo || data.ieee) {
         html += '<div class="project-links">';
@@ -368,7 +368,7 @@ function generateSidebarContent(data) {
         }
         html += '</div>';
     }
-    
+
     // Description
     if (data.description) {
         html += '<div class="project-section">';
@@ -376,7 +376,7 @@ function generateSidebarContent(data) {
         html += `<p>${data.description}</p>`;
         html += '</div>';
     }
-    
+
     // Technologies
     if (data.technologies && data.technologies.length > 0) {
         html += '<div class="project-section">';
@@ -388,7 +388,7 @@ function generateSidebarContent(data) {
         html += '</ul>';
         html += '</div>';
     }
-    
+
     // Features
     if (data.features && data.features.length > 0) {
         html += '<div class="project-section">';
@@ -400,6 +400,6 @@ function generateSidebarContent(data) {
         html += '</ul>';
         html += '</div>';
     }
-    
+
     return html;
 }

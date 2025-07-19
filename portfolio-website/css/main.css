@@ -21,7 +21,8 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 100px; /* Account for fixed navigation */
+    scroll-padding-top: 100px;
+    /* Account for fixed navigation */
 }
 
 body {

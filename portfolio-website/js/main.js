@@ -83,7 +83,7 @@ class SinglePageNavigation extends Component {
                 e.preventDefault();
                 const targetId = link.getAttribute('href');
                 const targetSection = document.querySelector(targetId);
-                
+
                 if (targetSection) {
                     targetSection.scrollIntoView({
                         behavior: 'smooth',
@@ -103,10 +103,10 @@ class SinglePageNavigation extends Component {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const id = entry.target.getAttribute('id');
-                    
+
                     // Remove active class from all nav links
                     navLinks.forEach(link => link.classList.remove('active'));
-                    
+
                     // Add active class to current section's nav link
                     const activeLink = document.querySelector(`nav a[href="#${id}"]`);
                     if (activeLink) {
@@ -145,22 +145,22 @@ class AchievementTabs extends Component {
 
         categoryTabs.forEach((tab, index) => {
             console.log(`Tab ${index}:`, tab.textContent, 'data-target:', tab.getAttribute('data-target'));
-            
+
             tab.addEventListener('click', (e) => {
                 e.preventDefault();
                 const target = tab.getAttribute('data-target');
                 console.log('Tab clicked:', target);
-                
+
                 // Remove active class from all tabs
                 categoryTabs.forEach(t => t.classList.remove('active'));
                 // Add active class to clicked tab
                 tab.classList.add('active');
-                
+
                 // Hide all achievement sections
                 achievementSections.forEach(section => {
                     section.classList.remove('active-section');
                 });
-                
+
                 // Show target section
                 const targetSection = document.getElementById(target);
                 if (targetSection) {
@@ -1024,26 +1024,26 @@ class AchievementSidebar extends Component {
 console.log('✅ JavaScript file loaded successfully');
 
 // Debug: Test tab functionality manually
-window.testTabs = function() {
+window.testTabs = function () {
     const tabs = document.querySelectorAll('.category-tabs li');
     const sections = document.querySelectorAll('.achievement-section');
     console.log('📋 Tabs found:', tabs.length);
     console.log('📄 Sections found:', sections.length);
-    
+
     tabs.forEach((tab, index) => {
         console.log(`Tab ${index}: "${tab.textContent.trim()}" -> data-target="${tab.getAttribute('data-target')}"`);
     });
-    
+
     sections.forEach((section, index) => {
         console.log(`Section ${index}: id="${section.id}" active="${section.classList.contains('active-section')}"`);
     });
 };
 
 // Debug: Test button functionality manually
-window.testButtons = function() {
+window.testButtons = function () {
     const buttons = document.querySelectorAll('[data-achievement], [data-project]');
     console.log('🔘 Achievement/Project buttons found:', buttons.length);
-    
+
     buttons.forEach((button, index) => {
         const achievement = button.getAttribute('data-achievement');
         const project = button.getAttribute('data-project');
@@ -1052,7 +1052,7 @@ window.testButtons = function() {
 };
 
 // Run tests after DOM loads
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     setTimeout(() => {
         console.log('🧪 Running manual tests...');
         if (window.testTabs) window.testTabs();
