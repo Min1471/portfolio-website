@@ -1,15 +1,22 @@
 :root {
-    --primary-color: #667eea;
-    --secondary-color: #764ba2;
-    --accent-color: #f093fb;
-    --text-dark: #2c3e50;
-    --text-light: #6c757d;
-    --bg-light: #f8f9fa;
-    --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.07);
-    --shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.1);
-    --shadow-heavy: 0 15px 35px rgba(0, 0, 0, 0.1);
+    --primary-color: #0ea5e9;
+    --secondary-color: #0284c7;
+    --accent-color: #22d3ee;
+    --tertiary-color: #0c4a6e;
+    --dark-blue: #1e3a8a;
+    --navy-blue: #172554;
+    --text-dark: #0c4a6e;
+    --text-light: #64748b;
+    --bg-light: #f0f9ff;
+    --bg-secondary: #e0f2fe;
+    --bg-dark: #0f172a;
+    --shadow-light: 0 4px 6px rgba(14, 165, 233, 0.07);
+    --shadow-medium: 0 8px 25px rgba(14, 165, 233, 0.1);
+    --shadow-heavy: 0 15px 35px rgba(14, 165, 233, 0.15);
     --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     --gradient-accent: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+    --gradient-dark: linear-gradient(135deg, var(--secondary-color), var(--tertiary-color));
+    --gradient-navy: linear-gradient(135deg, var(--dark-blue), var(--navy-blue));
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
@@ -64,12 +71,12 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--gradient-navy);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     z-index: 1000;
-    box-shadow: var(--shadow-light);
+    box-shadow: var(--shadow-heavy);
 }
 
 nav ul {
@@ -87,7 +94,7 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #333;
+    color: white;
     font-weight: 500;
     font-size: 18px;
     position: relative;
@@ -97,8 +104,8 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--primary-color);
-    background: rgba(102, 126, 234, 0.1);
+    color: var(--accent-color);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 nav a.active {
@@ -133,7 +140,7 @@ nav a::after {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #0066cc;
+    background-color: var(--primary-color);
     transition: width 0.3s;
 }
 
@@ -281,7 +288,7 @@ nav a:hover::after {
 
 #about {
     padding: 120px 0;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: linear-gradient(135deg, var(--bg-light) 0%, #e6fffa 100%);
     position: relative;
 }
 
@@ -359,11 +366,11 @@ nav a:hover::after {
 }
 
 .category-tabs li:hover {
-    color: #0066cc;
+    color: var(--primary-color);
 }
 
 .category-tabs li.active {
-    color: #0066cc;
+    color: var(--primary-color);
 }
 
 .category-tabs li.active::after {
@@ -373,7 +380,7 @@ nav a:hover::after {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #0066cc;
+    background-color: var(--primary-color);
 }
 
 /* Achievement Sections */
@@ -422,12 +429,13 @@ nav a:hover::after {
 
 /* Button styling for achievement cards */
 .achievement-card {
-    background: white;
+    background: linear-gradient(145deg, white, #f8fafc);
     border-radius: 20px;
     padding: 2rem;
     box-shadow: var(--shadow-light);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(14, 165, 233, 0.1);
+    border-top: 3px solid var(--tertiary-color);
     position: relative;
     overflow: hidden;
 }
@@ -602,7 +610,7 @@ nav a:hover::after {
 .contact-icon {
     font-size: 30px;
     margin-right: 20px;
-    color: #0066cc;
+    color: var(--primary-color);
 }
 
 .contact-text h3 {
@@ -615,7 +623,7 @@ nav a:hover::after {
 }
 
 .contact-text a {
-    color: #0066cc;
+    color: var(--primary-color);
     text-decoration: none;
 }
 
@@ -671,7 +679,7 @@ nav a:hover::after {
 }
 
 .notification-success {
-    background: linear-gradient(135deg, #4caf50, #45a049);
+    background: var(--gradient-primary);
 }
 
 .notification-error {
@@ -827,12 +835,12 @@ section:nth-child(even) {
 
 .btn-outline {
     background-color: transparent;
-    border: 2px solid #0066cc;
-    color: #0066cc;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
 }
 
 .btn-outline:hover {
-    background-color: #0066cc;
+    background-color: var(--primary-color);
     color: white;
 }
 
@@ -871,28 +879,28 @@ section:nth-child(even) {
 }
 
 .beginner {
-    background-color: #e3f2fd;
-    border-left: 4px solid #2196f3;
+    background-color: #f0fdf4;
+    border-left: 4px solid #bbf7d0;
 }
 
 .intermediate {
-    background-color: #e8f5e9;
-    border-left: 4px solid #4caf50;
+    background-color: #dcfce7;
+    border-left: 4px solid var(--accent-color);
 }
 
 .advanced {
-    background-color: #fff8e1;
-    border-left: 4px solid #ffc107;
+    background-color: #ecfdf5;
+    border-left: 4px solid var(--primary-color);
 }
 
 .expert {
-    background-color: #fce4ec;
-    border-left: 4px solid #e91e63;
+    background-color: #f6fffe;
+    border-left: 4px solid var(--secondary-color);
 }
 
 .progress-bar {
     height: 100%;
-    background-color: #0066cc;
+    background-color: var(--primary-color);
     border-radius: 5px;
 }
 
@@ -905,15 +913,17 @@ section:nth-child(even) {
 
 .tech-item {
     text-align: center;
-    background-color: #f9f9f9;
+    background: linear-gradient(145deg, white, #f8fafc);
     padding: 20px;
     border-radius: 10px;
+    border-top: 3px solid var(--dark-blue);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s;
 }
 
 .tech-item:hover {
     transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(30, 58, 138, 0.15);
 }
 
 .tech-icon {
@@ -965,7 +975,7 @@ section:nth-child(even) {
 }
 
 .back-link:hover {
-    color: #0066cc;
+    color: var(--primary-color);
 }
 
 .project-meta {
@@ -1051,7 +1061,7 @@ section:nth-child(even) {
 }
 
 .project-link.demo {
-    background-color: #0066cc;
+    background-color: var(--primary-color);
     color: white;
 }
 
@@ -1115,6 +1125,7 @@ section:nth-child(even) {
     z-index: 1000;
     transition: right 0.3s ease;
     overflow-y: auto;
+    border: none;
 }
 
 .project-sidebar.active {
@@ -1144,13 +1155,13 @@ section:nth-child(even) {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    border-bottom: 1px solid #e0e0e0;
-    background: #f8f9fa;
+    background: var(--gradient-navy);
+    color: white;
 }
 
 .sidebar-header h3 {
     margin: 0;
-    color: #333;
+    color: white;
     font-size: 1.4rem;
 }
 
@@ -1159,7 +1170,7 @@ section:nth-child(even) {
     border: none;
     font-size: 24px;
     cursor: pointer;
-    color: #666;
+    color: white;
     padding: 5px;
     border-radius: 50%;
     width: 35px;
@@ -1171,8 +1182,8 @@ section:nth-child(even) {
 }
 
 .close-btn:hover {
-    background-color: #e0e0e0;
-    color: #333;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--accent-color);
 }
 
 .sidebar-content {
@@ -1200,7 +1211,7 @@ section:nth-child(even) {
 
 .sidebar-content .project-type {
     font-weight: 600;
-    color: #0066cc;
+    color: var(--primary-color);
 }
 
 .sidebar-content .project-institution {
@@ -1241,7 +1252,7 @@ section:nth-child(even) {
 }
 
 .sidebar-content .project-link.demo {
-    background-color: #0066cc;
+    background-color: var(--primary-color);
     color: white;
 }
 
@@ -1281,33 +1292,33 @@ section:nth-child(even) {
 }
 
 .sidebar-content .tech-list li {
-    background-color: #e3f2fd;
+    background-color: #dcfce7;
     padding: 8px 12px;
     margin-bottom: 8px;
     border-radius: 5px;
     font-size: 0.9rem;
-    border-left: 3px solid #0066cc;
+    border-left: 3px solid var(--primary-color);
 }
 
 .sidebar-content .features-list li {
-    background-color: #f0f8e7;
+    background-color: var(--bg-light);
     padding: 8px 12px;
     margin-bottom: 6px;
     border-radius: 5px;
     font-size: 0.9rem;
-    border-left: 3px solid #4caf50;
+    border-left: 3px solid var(--accent-color);
     position: relative;
 }
 
 .sidebar-content .features-list li::before {
     content: '✓';
-    color: #4caf50;
+    color: var(--accent-color);
     font-weight: bold;
     margin-right: 8px;
 }
 
 .sidebar-content .btn-primary {
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: var(--gradient-primary);
     color: white;
     border: none;
     padding: 12px 24px;
@@ -1322,7 +1333,7 @@ section:nth-child(even) {
 
 .sidebar-content .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);
     color: white;
     text-decoration: none;
 }
@@ -1336,7 +1347,7 @@ section:nth-child(even) {
 }
 
 .skill-badge {
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: var(--gradient-primary);
     color: white;
     padding: 6px 12px;
     border-radius: 15px;
@@ -1344,7 +1355,7 @@ section:nth-child(even) {
     font-weight: 500;
     text-align: center;
     white-space: nowrap;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
 }
 
 /* Mobile responsiveness for sidebar */
@@ -1383,7 +1394,7 @@ section:nth-child(even) {
     background: #f8f9fa;
     border-radius: 8px;
     padding: 1.5rem;
-    border-left: 4px solid #667eea;
+    border-left: 4px solid var(--secondary-color);
     transition: all 0.3s ease;
 }
 
@@ -1406,7 +1417,7 @@ section:nth-child(even) {
 }
 
 .publication-title a:hover {
-    color: #667eea;
+    color: var(--secondary-color);
     text-decoration: underline;
 }
 
@@ -1425,21 +1436,21 @@ section:nth-child(even) {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    color: #667eea;
+    color: var(--secondary-color);
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 500;
     padding: 0.5rem 1rem;
-    border: 1px solid #667eea;
+    border: 1px solid var(--secondary-color);
     border-radius: 6px;
     transition: all 0.3s ease;
 }
 
 .publication-link .external-link:hover {
-    background: #667eea;
+    background: var(--secondary-color);
     color: white;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
 }
 
 .publication-link .link-icon {
@@ -1463,7 +1474,7 @@ section:nth-child(even) {
 }
 
 footer {
-    background: var(--text-dark);
+    background: var(--gradient-navy);
     color: white;
     text-align: center;
     padding: 2rem 0;
