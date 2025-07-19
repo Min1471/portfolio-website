@@ -80,6 +80,16 @@
         gap: 1.5rem;
     }
 
+    .tech-showcase {
+        margin-top: 2.5rem;
+        padding: 1.5rem 0;
+    }
+
+    .tech-showcase h3 {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+
     .tech-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
@@ -223,9 +233,29 @@
         margin-bottom: 0.8rem;
     }
 
+    .tech-showcase {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        margin-top: 2rem;
+        padding: 1.5rem 0;
+        width: 100%;
+        overflow: visible;
+    }
+
+    .tech-showcase h3 {
+        display: block !important;
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+        color: var(--text-dark) !important;
+    }
+
     .tech-grid {
+        display: grid !important;
+        visibility: visible !important;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
+        width: 100%;
     }
 
     .tech-item {
@@ -381,9 +411,29 @@
         padding: 1.5rem 1rem;
     }
 
+    .tech-showcase {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        margin-top: 1.5rem;
+        padding: 1.2rem 0;
+        width: 100%;
+        overflow: visible;
+    }
+
+    .tech-showcase h3 {
+        display: block !important;
+        font-size: 1.3rem;
+        margin-bottom: 1.2rem;
+        color: var(--text-dark) !important;
+    }
+
     .tech-grid {
+        display: grid !important;
+        visibility: visible !important;
         grid-template-columns: 1fr;
         gap: 1rem;
+        width: 100%;
     }
 
     .category-tabs li {
