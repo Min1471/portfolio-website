@@ -20,7 +20,8 @@ class PortfolioApp {
             new AchievementSidebar(),
             new ContactForm(),
             new ScrollAnimations(),
-            new MobileNavigation()
+            new MobileNavigation(),
+            new AdaptiveTextColor()
         ];
 
         console.log('Initializing components:', this.components.length);
@@ -1059,3 +1060,157 @@ document.addEventListener('DOMContentLoaded', function () {
         if (window.testButtons) window.testButtons();
     }, 1000);
 });
+
+// Adaptive Text Color System
+class AdaptiveTextColor {
+    constructor() {
+        this.header = null;
+        this.navLinks = [];
+        this.observer = null;
+        this.lastBackgroundBrightness = null;
+    }
+
+    isAvailable() {
+        return document.querySelector('header') !== null;
+    }
+
+    init() {
+        this.header = document.querySelector('header');
+        this.navLinks = Array.from(document.querySelectorAll('nav a'));
+
+        if (!this.header || this.navLinks.length === 0) {
+            console.log('AdaptiveTextColor: Required elements not found');
+            return;
+        }
+
+        this.setupIntersectionObserver();
+        this.setupScrollListener();
+        this.updateTextColor(); // Initial update
+
+        console.log('AdaptiveTextColor: Initialized');
+    }
+
+    setupIntersectionObserver() {
+        // Create intersection observer to detect background content
+        this.observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    this.analyzeBackgroundBrightness(entry.target);
+                }
+            });
+        }, {
+            root: null,
+            rootMargin: '-60px 0px 0px 0px', // Account for header height
+            threshold: 0.1
+        });
+
+        // Observe all sections that could be behind the header
+        const sections = document.querySelectorAll('section, .hero, .about, .achievements, .contact');
+        sections.forEach(section => this.observer.observe(section));
+    }
+
+    setupScrollListener() {
+        let ticking = false;
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    this.updateTextColor();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+    }
+
+    analyzeBackgroundBrightness(element) {
+        if (!element) return 'light';
+
+        const style = window.getComputedStyle(element);
+        const backgroundColor = style.backgroundColor;
+        const backgroundImage = style.backgroundImage;
+
+        // Parse RGB values from background color
+        let brightness = 'light';
+
+        if (backgroundColor && backgroundColor !== 'rgba(0, 0, 0, 0)' && backgroundColor !== 'transparent') {
+            const rgb = backgroundColor.match(/\d+/g);
+            if (rgb && rgb.length >= 3) {
+                const r = parseInt(rgb[0]);
+                const g = parseInt(rgb[1]);
+                const b = parseInt(rgb[2]);
+
+                // Calculate relative luminance
+                const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+                brightness = luminance > 0.5 ? 'light' : 'dark';
+            }
+        }
+
+        // Check for gradient backgrounds
+        if (backgroundImage && backgroundImage !== 'none') {
+            // For gradients, assume mixed background
+            brightness = 'mixed';
+        }
+
+        // Check if element has dark/light classes
+        if (element.classList.contains('dark-section') ||
+            element.classList.contains('bg-dark')) {
+            brightness = 'dark';
+        } else if (element.classList.contains('light-section') ||
+            element.classList.contains('bg-light')) {
+            brightness = 'light';
+        }
+
+        return brightness;
+    }
+
+    updateTextColor() {
+        // Get the element currently behind the header
+        const headerRect = this.header.getBoundingClientRect();
+        const elementBehind = document.elementFromPoint(
+            headerRect.left + headerRect.width / 2,
+            headerRect.top + headerRect.height + 10
+        );
+
+        if (!elementBehind) return;
+
+        // Find the closest section or main content element
+        const section = elementBehind.closest('section, main, .hero, .about, .achievements, .contact') || elementBehind;
+        const brightness = this.analyzeBackgroundBrightness(section);
+
+        // Force update every time for better debugging
+        this.applyTextColor(brightness);
+        this.lastBackgroundBrightness = brightness;
+    }
+
+    applyTextColor(brightness) {
+        // Remove existing brightness classes and data attributes
+        this.header.classList.remove('bg-light', 'bg-dark', 'bg-mixed');
+        this.header.removeAttribute('data-bg');
+
+        // Add appropriate class and data attribute
+        this.header.classList.add(`bg-${brightness}`);
+        this.header.setAttribute('data-bg', brightness);
+
+        // Update nav links individually for better control
+        this.navLinks.forEach(link => {
+            link.classList.remove('over-light', 'over-dark');
+
+            if (brightness === 'dark') {
+                link.classList.add('over-dark');
+            } else {
+                link.classList.add('over-light');
+            }
+        });
+
+        console.log(`AdaptiveTextColor: Updated to ${brightness} mode, header element:`, this.header);
+    }
+
+    destroy() {
+        if (this.observer) {
+            this.observer.disconnect();
+        }
+    }
+}
+
+
