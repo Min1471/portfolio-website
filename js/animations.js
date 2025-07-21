@@ -1,7 +1,6 @@
 class PortfolioAnimations {
     constructor() {
         this.observers = [];
-        this.particles = [];
         this.init();
     }
 
@@ -9,12 +8,8 @@ class PortfolioAnimations {
         document.body.classList.add('js-enabled');
 
         this.setupScrollAnimations();
-        this.setupParticleSystem();
-        this.setupTypewriterEffect();
-        this.setupStaggeredAnimations();
-        this.setupHoverEffects();
+        this.setupSimpleHoverEffects();
         this.setupScrollToTop();
-        this.setupParallaxEffect();
         this.setupHeaderScrollEffect();
         this.addAnimationClasses();
     }
@@ -22,22 +17,15 @@ class PortfolioAnimations {
     addAnimationClasses() {
         const animateElements = [
             { selector: '.about-card', class: 'animate-on-scroll' },
-            { selector: '.about-image img', class: 'animate-fade-in-left' },
-            { selector: '.about-text', class: 'animate-fade-in-right' },
-            { selector: '.quick-facts .fact-item', class: 'animate-scale-in stagger-animation' },
             { selector: '.skills-category', class: 'animate-on-scroll' },
-            { selector: '.tech-item', class: 'animate-on-scroll stagger-animation' },
-            { selector: '.achievement-card', class: 'animate-scale-in stagger-animation' },
-            { selector: '.contact-info', class: 'animate-fade-in-left' },
-            { selector: '.contact-form', class: 'animate-fade-in-right' }
+            { selector: '.achievement-card', class: 'animate-on-scroll' },
+            { selector: '.contact-info', class: 'animate-fade-in' },
+            { selector: '.contact-form', class: 'animate-fade-in' }
         ];
 
         animateElements.forEach(({ selector, class: className }) => {
-            document.querySelectorAll(selector).forEach((el, index) => {
+            document.querySelectorAll(selector).forEach((el) => {
                 el.classList.add(className);
-                if (className.includes('stagger-animation')) {
-                    el.style.setProperty('--stagger-delay', index);
-                }
             });
         });
     }
@@ -52,14 +40,6 @@ class PortfolioAnimations {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('animate-in');
-
-                    // Special handling for staggered animations
-                    if (entry.target.classList.contains('stagger-animation')) {
-                        const delay = parseInt(entry.target.style.getPropertyValue('--stagger-delay') || 0);
-                        setTimeout(() => {
-                            entry.target.classList.add('animate-in');
-                        }, delay * 100);
-                    }
                 }
             });
         }, observerOptions);
@@ -72,42 +52,17 @@ class PortfolioAnimations {
         this.observers.push(observer);
     }
 
-    setupParticleSystem() {
-        const heroSection = document.getElementById('hero');
-        if (!heroSection) return;
+    setupSimpleHoverEffects() {
+        // Simple hover effects for cards
+        document.querySelectorAll('.achievement-card, .tech-item').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-2px)';
+            });
 
-        const particlesContainer = document.createElement('div');
-        particlesContainer.className = 'particles-background';
-        heroSection.appendChild(particlesContainer);
-
-        // Create floating particles that look like paper pieces or book pages
-        for (let i = 0; i < 20; i++) {
-            this.createParticle(particlesContainer);
-        }
-    }
-
-    createParticle(container) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-
-        // Random size and position
-        const size = Math.random() * 8 + 4;
-        const left = Math.random() * 100;
-        const animationDelay = Math.random() * 6;
-        const animationDuration = Math.random() * 4 + 6;
-
-        particle.style.cssText = `
-            width: ${size}px;
-            height: ${size}px;
-            left: ${left}%;
-            top: ${Math.random() * 100}%;
-            animation-delay: ${animationDelay}s;
-            animation-duration: ${animationDuration}s;
-            background: rgba(139, 90, 60, ${Math.random() * 0.3 + 0.1});
-        `;
-
-        container.appendChild(particle);
-        this.particles.push(particle);
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
     }
 
     setupTypewriterEffect() {
