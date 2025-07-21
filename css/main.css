@@ -444,7 +444,7 @@ header[data-bg="light"] {
 
 /* Hero Section */
 #hero {
-    background: var(--gradient-warm);
+    background: var(--gradient-cozy);
     color: var(--text-dark);
     position: relative;
     overflow: hidden;
@@ -624,7 +624,7 @@ header[data-bg="light"] {
 
 /* Specific styling for hero section buttons */
 #hero .btn-outline {
-    background: rgba(245, 242, 237, 0.9);
+    background: var(--bg-light);
     backdrop-filter: blur(10px);
     border: 2px solid var(--primary-color);
     color: var(--primary-color);
