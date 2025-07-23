@@ -370,24 +370,76 @@ class ContactForm extends Component {
         event.preventDefault();
 
         const formData = new FormData(event.target);
-        const { name, email, message } = Object.fromEntries(formData);
+        const { name, email, subject, message } = Object.fromEntries(formData);
 
         if (!this.validateForm(name, email, message)) {
             return;
         }
 
-        this.showNotification('Thank you for your message! I\'ll get back to you soon.', 'success');
-        event.target.reset();
+        // Show loading state
+        const submitButton = event.target.querySelector('button[type="submit"]');
+        const originalText = submitButton.textContent;
+        submitButton.textContent = 'Sending...';
+        submitButton.disabled = true;
+
+        // Send email using EmailJS or Formspree
+        this.sendEmail(name, email, subject, message)
+            .then(() => {
+                this.showNotification('Thank you for your message! I\'ll get back to you soon.', 'success');
+                event.target.reset();
+            })
+            .catch((error) => {
+                console.error('Email sending failed:', error);
+                this.showNotification('Sorry, there was an error sending your message. Please try again or contact me directly.', 'error');
+            })
+            .finally(() => {
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+            });
+    }
+
+    async sendEmail(name, email, subject, message) {
+        // Option 1: Using Formspree (recommended - easy setup)
+        const formspreeEndpoint = 'https://formspree.io/f/mgvzalwy'; // Replace with your Formspree form ID
+
+        try {
+            const response = await fetch(formspreeEndpoint, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    subject: subject,
+                    message: message
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            return await response.json();
+        } catch (error) {
+            // Fallback: Try to open default email client
+            const emailBody = `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\n\nMessage:\n${message}`;
+            const mailtoLink = `mailto:phakamintanti47600@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+            window.open(mailtoLink);
+
+            throw error;
+        }
     }
 
     validateForm(name, email, message) {
         if (!name || !email || !message) {
-            this.showNotification('Please fill in all fields', 'error');
+            this.showNotification('Please fill in all required fields.', 'error');
             return false;
         }
 
         if (!this.isValidEmail(email)) {
-            this.showNotification('Please enter a valid email address', 'error');
+            this.showNotification('Please enter a valid email address.', 'error');
             return false;
         }
 
