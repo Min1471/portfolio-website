@@ -1284,7 +1284,7 @@ section:nth-child(even) {
     left: 0;
     width: 6px;
     height: 100%;
-    background: linear-gradient(135deg, #94BAC0, #7A9BA3);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     transform: scaleY(0);
     transition: transform 0.4s ease;
     transform-origin: bottom;
@@ -1297,7 +1297,7 @@ section:nth-child(even) {
     right: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(148, 186, 192, 0.1), transparent);
+    background: linear-gradient(90deg, transparent, rgba(212, 185, 150, 0.15), transparent);
     transition: right 0.6s ease;
 }
 
@@ -1311,32 +1311,32 @@ section:nth-child(even) {
 
 .skill-tag:hover {
     transform: translateX(12px) translateY(-4px);
-    box-shadow: 0 8px 25px rgba(148, 186, 192, 0.25);
-    border-color: rgba(148, 186, 192, 0.3);
+    box-shadow: 0 8px 25px rgba(139, 90, 60, 0.25);
+    border-color: rgba(139, 90, 60, 0.3);
 }
 
 .beginner {
-    background: linear-gradient(135deg, #F5F2ED 0%, #E8F3F5 100%);
-    border-left: 4px solid #94BAC0;
-    box-shadow: 0 2px 8px rgba(148, 186, 192, 0.2);
+    background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-warm) 100%);
+    border-left: 4px solid var(--accent-color);
+    box-shadow: 0 2px 8px rgba(212, 185, 150, 0.3);
 }
 
 .intermediate {
-    background: linear-gradient(135deg, #F0EBE3 0%, #E0F0F2 100%);
-    border-left: 4px solid #7A9BA3;
-    box-shadow: 0 2px 8px rgba(122, 155, 163, 0.2);
+    background: linear-gradient(135deg, var(--bg-warm) 0%, var(--bg-secondary) 100%);
+    border-left: 4px solid var(--secondary-color);
+    box-shadow: 0 2px 8px rgba(160, 120, 90, 0.3);
 }
 
 .advanced {
-    background: linear-gradient(135deg, #EDE6DB 0%, #D4EAEC 100%);
-    border-left: 4px solid #607C85;
-    box-shadow: 0 2px 8px rgba(96, 124, 133, 0.2);
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, #E5D3B3 100%);
+    border-left: 4px solid var(--primary-color);
+    box-shadow: 0 2px 8px rgba(139, 90, 60, 0.3);
 }
 
 .expert {
-    background: linear-gradient(135deg, #E8E0D6 0%, #C8E2E5 100%);
-    border-left: 4px solid #4D6D75;
-    box-shadow: 0 2px 8px rgba(77, 109, 117, 0.2);
+    background: linear-gradient(135deg, #E5D3B3 0%, #D4B996 100%);
+    border-left: 4px solid var(--dark-brown);
+    box-shadow: 0 2px 8px rgba(93, 58, 26, 0.4);
 }
 
 .progress-bar {
@@ -1510,7 +1510,7 @@ section:nth-child(even) {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #94BAC0, #7A9BA3, #607C85);
+    background: linear-gradient(90deg, #c57f33, #e08f42, #cb753f);
 }
 
 .skills-category h3 {
@@ -1530,7 +1530,7 @@ section:nth-child(even) {
     transform: translateX(-50%);
     width: 60px;
     height: 3px;
-    background: linear-gradient(90deg, #94BAC0, #7A9BA3);
+    background: linear-gradient(90deg, #c27c56, #bb6441);
     border-radius: 2px;
 }
 
@@ -1869,14 +1869,19 @@ section:nth-child(even) {
     color: white;
 }
 
-.sidebar-content .project-link.ieee {
-    background-color: #875cc6;
+a.btn.btn-outline.project-link.ieee {
+    background-color: #6B46C1;
+    color: white;
+}
+
+a.btn.btn-outline.project-link.ieee:hover {
+    background-color: #553C9A;
     color: white;
 }
 
 .sidebar-content .project-link:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.15);
 }
 
 .sidebar-content .project-section {
@@ -1968,7 +1973,7 @@ section:nth-child(even) {
     font-weight: 500;
     text-align: center;
     white-space: nowrap;
-    box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
+    box-shadow: 0 2px 4px rgba(224, 148, 33, 0.2);
 }
 
 /* Mobile responsiveness for sidebar */
