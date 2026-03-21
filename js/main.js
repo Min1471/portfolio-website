@@ -21,7 +21,8 @@ class PortfolioApp {
             new ContactForm(),
             new ScrollAnimations(),
             new MobileNavigation(),
-            new AdaptiveTextColor()
+            new AdaptiveTextColor(),
+            new SkillsAnimation()
         ];
 
         console.log('Initializing components:', this.components.length);
@@ -204,29 +205,6 @@ class Component {
     }
 }
 
-// Smooth Scrolling Component
-class SmoothScrolling extends Component {
-    setup() {
-        const links = document.querySelectorAll('a[href^="#"]');
-        links.forEach(link => {
-            link.addEventListener('click', this.handleSmoothScroll.bind(this));
-        });
-    }
-
-    handleSmoothScroll(event) {
-        event.preventDefault();
-        const targetId = event.target.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-
-        if (targetElement) {
-            targetElement.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    }
-}
-
 // Mobile Navigation Component
 class MobileNavigation extends Component {
     constructor() {
@@ -276,47 +254,6 @@ class MobileNavigation extends Component {
             if (this.menuButton) {
                 this.menuButton.classList.remove('active');
             }
-        }
-    }
-}
-
-// Tab Switching Component
-class TabSwitching extends Component {
-    constructor() {
-        super();
-        this.tabs = [];
-        this.sections = [];
-    }
-
-    isAvailable() {
-        return document.querySelectorAll('.category-tabs li').length > 0;
-    }
-
-    setup() {
-        this.tabs = document.querySelectorAll('.category-tabs li');
-        this.sections = document.querySelectorAll('.achievement-section');
-
-        this.tabs.forEach(tab => {
-            tab.addEventListener('click', this.handleTabClick.bind(this));
-        });
-    }
-
-    handleTabClick(event) {
-        const clickedTab = event.target;
-
-        // Remove active class from all tabs
-        this.tabs.forEach(tab => tab.classList.remove('active'));
-        clickedTab.classList.add('active');
-
-        // Hide all sections
-        this.sections.forEach(section => section.classList.remove('active-section'));
-
-        // Show target section with fade effect
-        const targetSection = document.getElementById(clickedTab.getAttribute('data-target'));
-        if (targetSection) {
-            setTimeout(() => {
-                targetSection.classList.add('active-section');
-            }, 150);
         }
     }
 }
@@ -1264,5 +1201,3 @@ class AdaptiveTextColor {
         }
     }
 }
-
-

@@ -13,6 +13,11 @@
 </head>
 
 <body>
+    <div id="stars-container">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+    </div>
     <header>
         <nav>
             <ul>
@@ -408,28 +413,6 @@
     <div id="sidebar-overlay" class="sidebar-overlay"></div>
 
     <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top"></button>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            document.body.classList.add('animations-ready');
-
-            setTimeout(function () {
-                const aboutSection = document.getElementById('about');
-                if (aboutSection) {
-                    aboutSection.style.opacity = '1';
-                    aboutSection.style.transform = 'none';
-                }
-
-                const animatedElements = document.querySelectorAll('[class*="animate-"]');
-                animatedElements.forEach(function (el) {
-                    if (!el.classList.contains('animate-in')) {
-                        el.style.opacity = '1';
-                        el.style.transform = 'none';
-                    }
-                });
-            }, 2000);
-        });
-    </script>
 
     <script src="js/animations-simple.js"></script>
     <script src="js/simple-main.js"></script>

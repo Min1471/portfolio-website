@@ -314,12 +314,10 @@ class PortfolioAnimations {
 
         // Remove loading overlay after page loads
         window.addEventListener('load', () => {
+            overlay.style.opacity = '0';
             setTimeout(() => {
-                overlay.style.opacity = '0';
-                setTimeout(() => {
-                    overlay.remove();
-                }, 500);
-            }, 1000);
+                overlay.remove();
+            }, 500); // Wait for the transition to finish
         });
     }
 

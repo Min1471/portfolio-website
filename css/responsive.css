@@ -1,66 +1,12 @@
-/* Enhanced Mobile Responsiveness */
+/* Modern Responsive Adjustments */
 
-/* Large Desktop */
-@media (min-width: 1400px) {
+@media (max-width: 1024px) {
     .container {
-        max-width: 1320px;
-    }
-
-    .hero-content h1 {
-        font-size: 4rem;
-    }
-}
-
-/* Desktop */
-@media (max-width: 1200px) {
-    .container {
-        padding: 0 30px;
-    }
-
-    .hero-content h1 {
-        font-size: 3rem;
-    }
-
-    .achievement-cards {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+        padding: 0 1.5rem;
     }
 
     .about-content {
-        gap: 2rem;
-    }
-}
-
-/* Tablet */
-@media (max-width: 992px) {
-    .container {
-        padding: 0 25px;
-    }
-
-    nav ul {
-        gap: 1.5rem;
-        padding: 15px 0;
-    }
-
-    nav a {
-        font-size: 16px;
-        padding: 10px 18px;
-    }
-
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-content h2 {
-        font-size: 1.3rem;
-    }
-
-    .hero-content p {
-        font-size: 1.1rem;
-    }
-
-    .about-content {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         text-align: center;
         gap: 2rem;
     }
@@ -71,505 +17,84 @@
     }
 
     .quick-facts {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-    }
-
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-    }
-
-    .tech-showcase {
-        margin-top: 2.5rem;
-        padding: 1.5rem 0;
-    }
-
-    .tech-showcase h3 {
-        font-size: 1.6rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .tech-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.5rem;
-    }
-
-    .achievement-cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .contact-container {
-        flex-direction: column;
-        gap: 2rem;
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 }
 
-/* Mobile Large */
 @media (max-width: 768px) {
-    html {
-        scroll-padding-top: 70px;
-    }
-
-    .container {
-        padding: 0 20px;
-    }
-
-    header {
-        padding: 0 10px;
+    section {
+        padding: 60px 0;
     }
 
     nav ul {
-        flex-wrap: wrap;
         gap: 1rem;
-        padding: 12px 0;
-        justify-content: center;
     }
 
     nav a {
-        font-size: 14px;
-        padding: 8px 16px;
-        border-radius: 12px;
-    }
-
-    main {
-        padding-top: 70px;
-    }
-
-    section {
-        padding: 3rem 0 2rem;
-        min-height: auto;
-    }
-
-    .hero-content {
-        padding: 1.5rem;
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
     }
 
     .hero-content h1 {
-        font-size: 2rem;
-        margin-bottom: 0.8rem;
-        line-height: 1.2;
-    }
-
-    .hero-content h2 {
-        font-size: 1.1rem;
         margin-bottom: 1rem;
     }
 
     .hero-content p {
         font-size: 1rem;
         margin-bottom: 2rem;
-        line-height: 1.5;
     }
 
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.8rem;
-    }
-
-    .btn {
-        padding: 12px 24px;
-        font-size: 14px;
-        min-width: 200px;
-        text-align: center;
-    }
-
-    .about-card {
-        padding: 2rem 1.5rem;
-        border-radius: 20px;
-    }
-
-    .about-image {
-        max-width: 250px;
-    }
-
-    .about-text h2 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-    }
-
-    .about-text p {
-        font-size: 1rem;
-        margin-bottom: 1.2rem;
-    }
-
-    .quick-facts {
+    .skills-grid, .achievement-cards {
         grid-template-columns: 1fr;
-        gap: 1rem;
-        margin-top: 1.5rem;
-    }
-
-    .fact-item {
-        padding: 1.2rem;
-    }
-
-    .section-header h2 {
-        font-size: 2rem;
-        margin-bottom: 0.8rem;
-    }
-
-    .section-header p {
-        font-size: 1rem;
-    }
-
-    .skills-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .skills-category {
-        padding: 1.8rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .skills-category h3 {
-        font-size: 1.4rem;
-        margin-bottom: 1rem;
-    }
-
-    .skill-tag {
-        padding: 1rem 1.4rem;
-        margin-bottom: 0.8rem;
-    }
-
-    .tech-showcase {
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        margin-top: 2rem;
-        padding: 1.5rem 0;
-        width: 100%;
-        overflow: visible;
-    }
-
-    .tech-showcase h3 {
-        display: block !important;
-        font-size: 1.4rem;
-        margin-bottom: 1.5rem;
-        color: var(--text-dark) !important;
-    }
-
-    .tech-grid {
-        display: grid !important;
-        visibility: visible !important;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-        width: 100%;
-    }
-
-    .tech-item {
-        padding: 1.5rem 1rem;
-    }
-
-    .tech-icon {
-        width: 60px;
-        height: 60px;
-        margin-bottom: 15px;
-    }
-
-    .tech-item h4 {
-        font-size: 1rem;
-    }
-
-    .category-tabs {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.8rem;
-    }
-
-    .category-tabs li {
-        min-width: 250px;
-        text-align: center;
-        padding: 10px 20px;
-        font-size: 14px;
-    }
-
-    .achievement-cards {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .achievement-card {
-        padding: 1.5rem;
-    }
-
-    .achievement-icon {
-        font-size: 2.5rem;
-        width: 70px;
-        height: 70px;
-        margin-bottom: 1rem;
-    }
-
-    .achievement-card h3 {
-        font-size: 1.1rem;
-        margin-bottom: 0.8rem;
-        line-height: 1.3;
-    }
-
-    .achievement-card p {
-        font-size: 0.9rem;
-        margin-bottom: 0.8rem;
     }
 
     .contact-container {
-        flex-direction: column;
-        gap: 2rem;
+        grid-template-columns: 1fr;
     }
 
-    .contact-details {
-        margin-top: 1.5rem;
-    }
-
-    .contact-item {
-        margin-bottom: 1.5rem;
-        flex-direction: column;
-        text-align: center;
-        gap: 0.5rem;
-    }
-
-    .contact-icon {
-        font-size: 2rem;
-        margin-right: 0;
-        margin-bottom: 0.5rem;
-    }
-
-    .contact-text h3 {
-        font-size: 1.1rem;
-        margin-bottom: 0.3rem;
-    }
-
-    .contact-text p {
-        font-size: 0.9rem;
-    }
-
-    .form-group {
-        margin-bottom: 1.2rem;
-    }
-
-    .form-control {
-        padding: 12px;
-        font-size: 16px;
-        /* Prevents zoom on iOS */
-    }
-
-    .scroll-to-top {
-        width: 45px;
-        height: 45px;
-        bottom: 20px;
-        right: 20px;
-        font-size: 18px;
+    .project-sidebar {
+        max-width: 100%;
+        padding: 2rem;
     }
 }
 
-/* Mobile Small */
 @media (max-width: 480px) {
-    .container {
-        padding: 0 15px;
-    }
-
     nav ul {
-        padding: 10px 0;
-        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    nav a {
-        font-size: 13px;
-        padding: 6px 12px;
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
     }
 
-    .hero-content h1 {
-        font-size: 1.8rem;
-        line-height: 1.1;
-    }
-
-    .hero-content h2 {
-        font-size: 1rem;
-    }
-
-    .hero-content p {
-        font-size: 0.95rem;
-    }
-
-    .about-card {
-        padding: 1.5rem 1rem;
-    }
-
-    .about-image {
-        max-width: 200px;
-    }
-
-    .about-text h2 {
-        font-size: 1.8rem;
+    .btn {
+        width: 100%;
     }
 
     .section-header h2 {
-        font-size: 1.8rem;
-    }
-
-    .skills-category {
-        padding: 1.5rem 1rem;
-    }
-
-    .tech-showcase {
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        margin-top: 1.5rem;
-        padding: 1.2rem 0;
-        width: 100%;
-        overflow: visible;
-    }
-
-    .tech-showcase h3 {
-        display: block !important;
-        font-size: 1.3rem;
-        margin-bottom: 1.2rem;
-        color: var(--text-dark) !important;
-    }
-
-    .tech-grid {
-        display: grid !important;
-        visibility: visible !important;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        width: 100%;
-    }
-
-    .category-tabs li {
-        min-width: 200px;
-        font-size: 13px;
-        padding: 8px 16px;
-    }
-
-    .achievement-card {
-        padding: 1.2rem;
-    }
-
-    .achievement-card h3 {
-        font-size: 1rem;
-        line-height: 1.2;
-    }
-
-    .contact-item {
-        margin-bottom: 1.2rem;
-    }
-
-    .btn {
-        min-width: 180px;
-        padding: 10px 20px;
-        font-size: 13px;
+        font-size: 2rem;
     }
 }
 
-/* Extra Small Mobile */
-@media (max-width: 360px) {
-    .container {
-        padding: 0 12px;
-    }
-
-    .hero-content {
-        padding: 1rem;
-    }
-
-    .hero-content h1 {
-        font-size: 1.6rem;
-    }
-
-    .about-card {
-        padding: 1.2rem 0.8rem;
-    }
-
-    .skills-category {
-        padding: 1.2rem 0.8rem;
-    }
-
-    .achievement-card {
-        padding: 1rem;
-    }
-
-    .btn {
-        min-width: 160px;
-        padding: 8px 16px;
-    }
-
-    .category-tabs li {
-        min-width: 160px;
-        font-size: 12px;
+/* Fix for tech icons grayscale on mobile touch */
+@media (hover: none) {
+    .tech-icon img {
+        filter: none;
     }
 }
 
-/* Landscape Mobile */
-@media (max-height: 500px) and (orientation: landscape) {
-    section {
-        padding: 2rem 0 1rem;
-        min-height: auto;
-    }
-
-    .hero-content {
-        padding: 1rem;
-    }
-
-    .hero-content h1 {
-        font-size: 1.8rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .hero-content h2 {
-        font-size: 1rem;
-        margin-bottom: 0.8rem;
-    }
-
-    .hero-content p {
-        font-size: 0.9rem;
-        margin-bottom: 1.5rem;
-    }
-}
-
-/* Touch Device Improvements */
-@media (hover: none) and (pointer: coarse) {
-    .btn:hover {
-        transform: none;
-    }
-
-    .tech-item:hover,
-    .achievement-card:hover {
-        transform: none;
-    }
-
-    .nav a:hover {
-        transform: none;
-    }
-
-    /* Larger touch targets */
-    .btn {
-        min-height: 44px;
-    }
-
-    nav a {
-        min-height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .category-tabs li {
-        min-height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-}
-
-/* Reduce motion for accessibility */
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+    #stars, #stars2, #stars3 {
+        animation: none;
     }
-
-    .particles-background {
-        display: none;
+    
+    * {
+        animation: none !important;
+        transition: none !important;
     }
 }
