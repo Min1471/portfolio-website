@@ -4,55 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills - My Portfolio</title>
+    <title>Skills - Phakamin T.</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
 </head>
 
-<body>
+<body class="achievement-detail-page">
     <div id="stars-container">
         <div id="stars"></div>
         <div id="stars2"></div>
-        <div id="stars3"></div>
     </div>
     <header>
         <nav>
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="achievements.html">Achievements</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="../index.html#hero">HOME</a></li>
+                <li><a href="../index.html#about">ABOUT</a></li>
+                <li><a href="../index.html#skills">SKILLS</a></li>
+                <li><a href="../index.html#achievements">WORK</a></li>
+                <li><a href="../index.html#contact">CONTACT</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="page-banner">
-        <div class="banner-content">
-            <h1>My Skills</h1>
-            <p>A comprehensive overview of my technical expertise and capabilities</p>
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>My Skills</h1>
+                <h2>Technical Expertise</h2>
+                <p>A comprehensive overview of my technical expertise and capabilities at the intersection of data science and creative engineering.</p>
+                <div class="hero-buttons">
+                    <a href="../index.html" class="btn btn-primary">← BACK TO HOME</a>
+                </div>
+            </div>
         </div>
     </section>
 
     <main class="container">
         <section class="skills-section">
-            <h2>Technical Skills</h2>
-
             <div class="skills-category">
                 <h3>Programming Languages</h3>
                 <div class="skill-tags-container">
-                    <div class="skill-tag expert">
-                        <span class="skill-name">Python</span>
-                        <span class="skill-level">Expert</span>
+                    <div class="skill-tag">
+                        <span class="skill-name">PYTHON</span>
+                        <span class="skill-level">EXPERT</span>
                     </div>
-                    <div class="skill-tag advanced">
+                    <div class="skill-tag">
                         <span class="skill-name">SQL</span>
-                        <span class="skill-level">Advanced</span>
+                        <span class="skill-level">EXPERT</span>
                     </div>
-                    <div class="skill-tag beginner">
+                    <div class="skill-tag">
+                        <span class="skill-name">JAVASCRIPT</span>
+                        <span class="skill-level">ADVANCED</span>
+                    </div>
+                    <div class="skill-tag">
                         <span class="skill-name">C/C++</span>
-                        <span class="skill-level">Beginner</span>
+                        <span class="skill-level">INTERMEDIATE</span>
                     </div>
                 </div>
             </div>
@@ -60,30 +69,64 @@
             <div class="skills-category">
                 <h3>Data Science & Analytics</h3>
                 <div class="skill-tags-container">
-                    <div class="skill-tag advanced">
-                        <span class="skill-name">Data Analysis</span>
-                        <span class="skill-level">Advanced</span>
+                    <div class="skill-tag">
+                        <span class="skill-name">PYTORCH</span>
+                        <span class="skill-level">ADVANCED</span>
                     </div>
-                    <div class="skill-tag intermediate">
-                        <span class="skill-name">Machine Learning</span>
-                        <span class="skill-level">Intermediate</span>
+                    <div class="skill-tag">
+                        <span class="skill-name">PANDAS</span>
+                        <span class="skill-level">EXPERT</span>
                     </div>
-                    <div class="skill-tag intermediate">
-                        <span class="skill-name">Data Visualization</span>
-                        <span class="skill-level">Intermediate</span>
+                    <div class="skill-tag">
+                        <span class="skill-name">SPARK</span>
+                        <span class="skill-level">INTERMEDIATE</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-name">TABLEAU</span>
+                        <span class="skill-level">ADVANCED</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-name">MACHINE LEARNING</span>
+                        <span class="skill-level">ADVANCED</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3>Infrastructure & Tools</h3>
+                <div class="skill-tags-container">
+                    <div class="skill-tag">
+                        <span class="skill-name">AWS</span>
+                        <span class="skill-level">ADVANCED</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-name">DOCKER</span>
+                        <span class="skill-level">INTERMEDIATE</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-name">MONGODB</span>
+                        <span class="skill-level">ADVANCED</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-name">POSTGRES</span>
+                        <span class="skill-level">EXPERT</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-name">GIT</span>
+                        <span class="skill-level">ADVANCED</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="skills-section">
-            <h2>Tools & Technologies</h2>
+            <h2 style="text-align: left; margin-bottom: 2rem;">Technology Stack</h2>
             <div class="tech-grid">
                 <div class="tech-item">
                     <div class="tech-icon">
                         <img src="../images/icons/git.png" alt="Git">
                     </div>
-                    <h4>Git</h4>
+                    <h4>GIT</h4>
                 </div>
                 <div class="tech-item">
                     <div class="tech-icon">
@@ -95,28 +138,33 @@
                     <div class="tech-icon">
                         <img src="../images/icons/docker.png" alt="Docker">
                     </div>
-                    <h4>Docker</h4>
+                    <h4>DOCKER</h4>
                 </div>
                 <div class="tech-item">
                     <div class="tech-icon">
                         <img src="../images/icons/mongodb.png" alt="MongoDB">
                     </div>
-                    <h4>MongoDB</h4>
+                    <h4>MONGODB</h4>
                 </div>
                 <div class="tech-item">
                     <div class="tech-icon">
-                        <img src="../images/icons/sql.png" alt="MySQL">
+                        <img src="../images/icons/sql.png" alt="SQL">
                     </div>
-                    <h4>MySQL</h4>
+                    <h4>SQL</h4>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
+        <div class="container">
+            <p>&copy; 2025 PHAKAMIN T. // ANALYTICAL CREATIVE // ALL RIGHTS RESERVED.</p>
+        </div>
     </footer>
 
-    <script src="../js/main.js"></script>
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top"></button>
+
+    <script src="../js/core.js"></script>
 </body>
 
 </html>

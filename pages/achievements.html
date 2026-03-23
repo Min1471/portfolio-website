@@ -4,174 +4,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Achievements - My Portfolio</title>
+    <title>Achievements - Phakamin T.</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <style>
+        .achievement-categories {
+            margin-bottom: 4rem;
+        }
+        
+        .category-tabs {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .category-tabs li {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            border-bottom: 2px solid transparent;
+            transition: var(--transition);
+        }
+        
+        .category-tabs li:hover, .category-tabs li.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+        
+        .achievement-section {
+            display: none;
+        }
+        
+        .achievement-section.active-section {
+            display: block;
+            animation: fadeIn 0.5s ease forwards;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .achievement-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .achievement-card p {
+            flex-grow: 1;
+        }
+    </style>
 </head>
 
-<body>
+<body class="achievement-detail-page">
     <div id="stars-container">
         <div id="stars"></div>
         <div id="stars2"></div>
-        <div id="stars3"></div>
     </div>
     <header>
         <nav>
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="achievements.html">Achievements</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="../index.html#hero">HOME</a></li>
+                <li><a href="../index.html#about">ABOUT</a></li>
+                <li><a href="../index.html#skills">SKILLS</a></li>
+                <li><a href="../index.html#achievements">WORK</a></li>
+                <li><a href="../index.html#courses">COURSES</a></li>
+                <li><a href="../index.html#contact">CONTACT</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="page-banner">
-        <div class="banner-content">
-            <h1>My Achievements</h1>
-            <p>A showcase of my academic and professional accomplishments</p>
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Selected Achievements</h1>
+                <h2>Academic & Professional</h2>
+                <p>A showcase of my academic honors, professional milestones, and technical projects that define my journey as an engineer.</p>
+                <div class="hero-buttons">
+                    <a href="../index.html" class="btn btn-primary">← BACK TO HOME</a>
+                </div>
+            </div>
         </div>
     </section>
 
     <main class="container">
-        <!-- Category tabs for navigation -->
         <div class="achievement-categories">
             <ul class="category-tabs">
-                <li class="active" data-target="degrees">Degrees & Certificates</li>
-                <li data-target="experiences">Experiences</li>
-                <li data-target="projects">Projects</li>
+                <li class="active" data-target="degrees">DEGREES & CERTIFICATES</li>
+                <li data-target="projects">PROJECTS</li>
             </ul>
         </div>
 
-        <!-- Degrees & Certificates Section -->
         <section id="degrees" class="achievement-section active-section">
-            <h2>Degrees & Certificates</h2>
             <div class="achievement-cards">
-                <div class="achievement-card">
-                    <div class="achievement-icon">🎓</div>
-                    <h3>Master of Information Technology</h3>
-                    <p>UNSW, 2025</p>
-                    <p>Specialized in data science and data engineer</p>
-                    <button class="btn btn-outline" data-achievement="masters-degree">View Details</button>
+                <div class="bento-item achievement-card">
+                    <div class="meta">ACADEMIC DEGREE</div>
+                    <h3>MASTER OF IT</h3>
+                    <p>UNSW, 2025. Specialized in data science and data engineering with distinction average.</p>
                 </div>
 
-                <div class="achievement-card">
-                    <div class="achievement-icon">🎓</div>
-                    <h3>Bachelor of Electrical Engineer, First Class Honours</h3>
-                    <p>Thammasat University, 2022</p>
-                    <p>Specialized in electrical communication engineer</p>
-                    <button class="btn btn-outline" data-achievement="bachelors-degree">View Details</button>
+                <div class="bento-item achievement-card">
+                    <div class="meta">ACADEMIC DEGREE</div>
+                    <h3>BACHELOR OF EE (HONS)</h3>
+                    <p>Thammasat University, 2022. First Class Honours in electrical communication engineering.</p>
                 </div>
 
-                <div class="achievement-card">
-                    <div class="achievement-icon">🏆</div>
-                    <h3>AI for business and industry training program 2021</h3>
-                    <p>AMEICC (AEM-METI Economic and Industrial Cooperation Committee), 2022</p>
-                    <p>Training sessions for applying AI and machine learning into business and industry</p>
-                    <button class="btn btn-outline" data-achievement="ai-training">View Certificate</button>
+                <div class="bento-item achievement-card">
+                    <div class="meta">CERTIFICATION</div>
+                    <h3>AI FOR BUSINESS</h3>
+                    <p>AMEICC, 2022. Professional training program for industrial AI applications.</p>
+                    <a href="courses/ai-training.html" class="btn-text">VIEW DETAILS →</a>
                 </div>
 
-                <div class="achievement-card">
-                    <div class="achievement-icon">🏅</div>
-                    <h3>InciT outstanding paper</h3>
-                    <p>Council of IT Deans in Thailand (CITT), 2022</p>
-                    <p>Awarded for outstanding paper in the Academic conference</p>
-                    <button class="btn btn-outline" data-achievement="outstanding-paper">View Certificate</button>
+                <div class="bento-item achievement-card">
+                    <div class="meta">AWARD</div>
+                    <h3>INCIT OUTSTANDING PAPER</h3>
+                    <p>CITT, 2022. Awarded for research excellence in AI-driven signal processing.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Experiences Section -->
-        <section id="experiences" class="achievement-section">
-            <h2>Professional Experiences</h2>
-            <div class="achievement-cards">
-                <div class="achievement-card">
-                    <div class="achievement-icon">👨‍🔧</div>
-                    <h3>Service Engineer Intern</h3>
-                    <p>AIT Service Co.,LTD.</p>
-                    <p>June 2022 - August 2023</p>
-                    <p>Design, prototyping and maintaining several projects and electrical equipments</p>
-                    <button class="btn btn-outline" data-achievement="service-engineer-intern">View Experience</button>
-                </div>
-
-                <div class="achievement-card">
-                    <div class="achievement-icon">🛒</div>
-                    <h3>Shop Assistant</h3>
-                    <p>Walsh Bay Local</p>
-                    <p>2024 - Present</p>
-                    <p>Deliver the best customer service experience</p>
-                    <button class="btn btn-outline" data-achievement="shop-assistant">View Experience</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
         <section id="projects" class="achievement-section">
-            <h2>Notable Projects</h2>
             <div class="achievement-cards">
-                <div class="achievement-card">
-                    <div class="achievement-icon">📱</div>
-                    <h3>Conference Management Application</h3>
-                    <p>Web and Mobile Application</p>
-                    <p>Built with React, Python, SQL, Redis and MongoDB</p>
-                    <button class="btn btn-outline" data-project="conference-management">View Project</button>
+                <div class="bento-item achievement-card">
+                    <div class="meta">WEB ARCHITECTURE</div>
+                    <h3>CONFERENCE APP</h3>
+                    <p>Full-stack event management solution utilizing React, FastAPI, and MongoDB.</p>
+                    <a href="achievements/conference-management.html" class="btn-text">VIEW PROJECT →</a>
                 </div>
 
-                <div class="achievement-card">
-                    <div class="achievement-icon">📈</div>
-                    <h3>Crypto Data Analysis</h3>
-                    <p>Data Engineering Project</p>
-                    <p>Extracted by Python, Processed by Pandas, Visualized by Power BI</p>
-                    <button class="btn btn-outline" data-project="crypto-pipeline-analyst">View Project</button>
+                <div class="bento-item achievement-card">
+                    <div class="meta">DATA ENGINEERING</div>
+                    <h3>CRYPTO PIPELINE</h3>
+                    <p>Automated market data extraction and analysis using Python and Pandas.</p>
+                    <a href="achievements/crypto-pipeline-analyst.html" class="btn-text">VIEW PROJECT →</a>
                 </div>
 
-                <div class="achievement-card">
-                    <div class="achievement-icon">🤖</div>
-                    <h3>AI Chatbot</h3>
-                    <p>Machine learning project</p>
-                    <p>Natural language processing using Python and TensorFlow</p>
-                    <button class="btn btn-outline" data-project="chatbot">View Project</button>
+                <div class="bento-item achievement-card">
+                    <div class="meta">MACHINE LEARNING</div>
+                    <h3>AI CHATBOT</h3>
+                    <p>NLP implementation for intelligent conversational interfaces using TensorFlow.</p>
+                    <a href="achievements/chatbot.html" class="btn-text">VIEW PROJECT →</a>
                 </div>
 
-                <div class="achievement-card">
-                    <div class="achievement-icon">📚</div>
-                    <h3>Emotional Classification Study Using Various ML Techniques</h3>
-                    <p>Study Project</p>
-                    <p>Using multiple machine learning algorithms to classify emotions in text data</p>
-                    <button class="btn btn-outline" data-project="emotion">View Project</button>
+                <div class="bento-item achievement-card">
+                    <div class="meta">DATA SCIENCE</div>
+                    <h3>EMOTION CLASSIFICATION</h3>
+                    <p>Comparative study of various ML models for sentiment analysis in text data.</p>
+                    <a href="achievements/emotion.html" class="btn-text">VIEW PROJECT →</a>
                 </div>
 
-                <div class="achievement-card">
-                    <div class="achievement-icon">🔉</div>
-                    <h3>Adaptive Noise Cancellation Using a Fully Connected Network: A Lesson Learned</h3>
-                    <p>Research Project</p>
-                    <p>Using a fully connected neural network to implement realtime adaptive noise cancellation techniques</p>
-                    <button class="btn btn-outline" data-project="adaptive-noise-cancellation">View Project</button>
+                <div class="bento-item achievement-card">
+                    <div class="meta">SIGNAL PROCESSING</div>
+                    <h3>ADAPTIVE NOISE CANCELLATION</h3>
+                    <p>Neural network implementation for real-time environmental audio optimization.</p>
+                    <a href="achievements/adaptive-noise-cancellation.html" class="btn-text">VIEW PROJECT →</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Project Details Sidebar -->
-    <div id="project-sidebar" class="project-sidebar">
-        <div class="sidebar-header">
-            <h3 id="sidebar-title">Project Details</h3>
-            <button id="close-sidebar" class="close-btn">&times;</button>
-        </div>
-        <div id="sidebar-content" class="sidebar-content">
-            <!-- Content will be loaded dynamically -->
-        </div>
-    </div>
-
-    <!-- Sidebar Overlay -->
-    <div id="sidebar-overlay" class="sidebar-overlay"></div>
-
     <footer>
+        <div class="container">
+            <p>&copy; 2025 PHAKAMIN T. // ANALYTICAL CREATIVE // ALL RIGHTS RESERVED.</p>
+        </div>
     </footer>
 
-    <script src="../js/main.js"></script>
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top"></button>
+
+    <script src="../js/core.js"></script>
 </body>
 
 </html>

@@ -4,28 +4,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conference Management Application - Phakamin Tantiwatanavorakul</title>
+    <title>Conference Management App - Phakamin T.</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../css/normalize.css">
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../css/responsive.css">
     <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+    <style>
+        .project-showcase {
+            margin-top: -80px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .viz-frame {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 4rem;
+            box-shadow: var(--glass-shadow);
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+            background: linear-gradient(135deg, rgba(192, 252, 253, 0.05) 0%, rgba(15, 23, 42, 0.4) 100%);
+        }
+
+        .placeholder-icon {
+            font-size: 5rem;
+            color: var(--primary);
+            opacity: 0.5;
+            filter: drop-shadow(0 0 20px rgba(192, 252, 253, 0.3));
+        }
+
+        .project-details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .detail-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 3rem;
+        }
+
+        .detail-card h3 {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--primary);
+            letter-spacing: 0.2em;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-stack-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            list-style: none;
+            padding: 0;
+        }
+
+        .tech-tag {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            color: var(--text-main);
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+        }
+
+        @media (max-width: 992px) {
+            .project-details-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
-<body>
+<body class="achievement-detail-page">
     <div id="stars-container">
         <div id="stars"></div>
         <div id="stars2"></div>
-        <div id="stars3"></div>
     </div>
+    
     <header>
         <nav>
             <ul>
-                <li><a href="../../index.html#hero">Home</a></li>
-                <li><a href="../../index.html#about">About</a></li>
-                <li><a href="../../index.html#skills">Skills</a></li>
-                <li><a href="../../index.html#achievements">Achievements</a></li>
-                <li><a href="../../index.html#contact">Contact</a></li>
+                <li><a href="../../index.html#hero">HOME</a></li>
+                <li><a href="../../index.html#about">ABOUT</a></li>
+                <li><a href="../../index.html#skills">SKILLS</a></li>
+                <li><a href="../../index.html#achievements">WORK</a></li>
+                <li><a href="../../index.html#courses">COURSES</a></li>
+                <li><a href="../../index.html#contact">CONTACT</a></li>
             </ul>
         </nav>
     </header>
@@ -33,65 +109,64 @@
     <section id="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Conference Management Application</h1>
-                <h2>Web and Mobile Application</h2>
-                <p>Built with React, FastAPI, Redis, SQL and MongoDB</p>
+                <h1>Conference Management App</h1>
+                <h2>Software Architecture & Full-Stack Development</h2>
+                <p>A comprehensive platform for high-concurrency event coordination and attendee engagement.</p>
                 <div class="hero-buttons">
-                    <a href="../../index.html#achievements" class="btn btn-primary">← Back to Achievements</a>
+                    <a href="../../index.html#achievements" class="btn btn-primary">← BACK TO WORK</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about">
-        <div class="container">
-            <div class="about-card">
-                <div class="about-content">
-                    <div class="about-image">
-                        <div class="achievement-icon"
-                            style="font-size: 8rem; margin: 2rem auto; display: flex; align-items: center; justify-content: center;">
-                            📱</div>
+    <main class="container project-showcase">
+        <div class="viz-frame">
+            <div class="placeholder-icon">⚛</div>
+        </div>
+
+        <div class="project-details-grid">
+            <div class="detail-card">
+                <h3>PROJECT OVERVIEW</h3>
+                <p>Developed as a capstone project at UNSW, this application provides a full-stack solution for managing complex conference ecosystems. From real-time session tracking to multi-role authentication, the system architecture was designed for scalability and seamless user experience across both organizer and attendee interfaces.</p>
+                <div class="tech-stack-list">
+                    <span class="tech-tag">REACT</span>
+                    <span class="tech-tag">FASTAPI</span>
+                    <span class="tech-tag">REDIS</span>
+                    <span class="tech-tag">MONGODB</span>
+                    <span class="tech-tag">DOCKER</span>
+                    <span class="tech-tag">JWT</span>
+                </div>
+            </div>
+
+            <div class="detail-card">
+                <h3>CORE CAPABILITIES</h3>
+                <div class="quick-facts" style="margin: 0; padding: 0; border: none;">
+                    <div class="fact-item">
+                        <h4>Frontend</h4>
+                        <p>Modern React architecture with CSS Modules for highly responsive, intuitive dashboards.</p>
                     </div>
-                    <div class="about-text">
-                        <h2>Conference Management Application</h2>
-                        <p><strong>Type:</strong> Web and Mobile Application</p>
-                        <p><strong>Technologies:</strong> React, FastAPI, Redis, SQL, MongoDB</p>
-                        <p><strong>Platform:</strong> Cross-platform Solution</p>
-
-                        <p>Developed a comprehensive conference management application that handles event organization,
-                            attendee registration, and real-time updates. This full-stack project demonstrates modern
-                            web development practices and database management skills.</p>
-
-                        <div class="quick-facts">
-                            <div class="fact-item">
-                                <h4>⚛️ Frontend</h4>
-                                <p>React<br>Mobile Responsive</p>
-                            </div>
-                            <div class="fact-item">
-                                <h4>🔧 Backend</h4>
-                                <p>FastAPI<br>RESTful APIs<br>NATs</p>
-                            </div>
-                            <div class="fact-item">
-                                <h4>🗄️ Database</h4>
-                                <p>MongoDB & SQL<br>Redis Caching</p>
-                            </div>
-                        </div>
+                    <div class="fact-item">
+                        <h4>Backend</h4>
+                        <p>Asynchronous FastAPI implementation paired with Redis for high-performance data caching.</p>
+                    </div>
+                    <div class="fact-item">
+                        <h4>Management</h4>
+                        <p>Integrated tools for session scheduling, speaker tracking, and real-time organizer analytics.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Phakamin Tantiwatanavorakul. All rights reserved.</p>
+            <p>&copy; 2025 PHAKAMIN T. // ANALYTICAL CREATIVE // ALL RIGHTS RESERVED.</p>
         </div>
     </footer>
 
     <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top"></button>
 
-    <script src="../../js/animations-simple.js"></script>
-    <script src="../../js/simple-main.js"></script>
+    <script src="../../js/core.js"></script>
 </body>
 
 </html>

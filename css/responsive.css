@@ -43,6 +43,31 @@
         grid-template-columns: 1fr;
     }
 
+    .skill-list {
+        gap: 0.5rem;
+    }
+
+    .skill-tag {
+        min-width: calc(50% - 0.25rem);
+        padding: 0.5rem 0.75rem;
+    }
+
+    /* Keep horizontal scroll functional on mobile */
+    #achievements .achievement-cards {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+    }
+
+    #achievements .achievement-card {
+        width: 85vw; /* Almost full width on mobile */
+        min-height: 280px;
+    }
+
+    #courses .achievement-cards {
+        grid-template-columns: 1fr;
+    }
+
     .contact-layout {
         grid-template-columns: 1fr;
         gap: 3rem;
