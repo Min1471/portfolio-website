@@ -8,7 +8,7 @@
     --bg-card: rgba(15, 23, 42, 0.4); /* Translucent Slate Blue */
     --bg-nav: rgba(2, 6, 23, 0.85);
     --text-main: #f8fafc;
-    --text-dim: #94a3b8;
+    --text-dim: #cbd5e1; /* Brighter silver (Slate 300) for better contrast */
     --border-color: rgba(148, 163, 184, 0.15); /* Subtle Silver-Grey Border */
     --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     --transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
