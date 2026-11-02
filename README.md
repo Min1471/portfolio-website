@@ -12,11 +12,10 @@ The project consists of the following files and directories:
   - `normalize.css`: Normalizes default styles across different browsers.
   - `responsive.css`: Styles for responsive design.
 - `js/`: Contains JavaScript files for interactivity.
-  - `main.js`: JavaScript code for handling interactions and animations.
-- `pages/`: Contains additional HTML pages.
-  - `achievements.html`: Showcases academic and professional achievements.
-  - `contact.html`: Contains a contact form for visitors.
-- `assets/fonts/`: Directory for custom fonts used in the website.
+  - `theme.js`: Picks the site theme and loads its fonts (runs in `<head>`).
+  - `core.js`: Scrolling, header and animation behaviour.
+- `pages/achievements/`: One detail page per project.
+- `pages/courses/`: Detail pages for courses and certificates.
 - `images/`: Directory for storing images such as profile pictures and project screenshots.
 - `favicon.ico`: The favicon for the website.
 
@@ -27,6 +26,17 @@ The project consists of the following files and directories:
 3. Customize the content in `achievements.html` and `contact.html` to reflect your personal information and achievements.
 4. Modify the CSS files in the `css` directory to change the styling as desired.
 5. Add any additional images to the `images` directory and update the HTML files accordingly.
+
+## Themes
+
+The site ships with three themes, all driven by CSS variables at the top of `css/main.css`:
+
+- `cosmic`: midnight blue and cyan with stars (the original design)
+- `blueprint`: Prussian-blue drafting grid with yellow pencil accents
+- `signal`: light instrument-panel grey with a teal signal trace
+
+To change the theme for everyone, edit `DEFAULT_THEME` in `js/theme.js`.
+To preview a theme without changing anything, add `?theme=blueprint` (or `cosmic`, `signal`) to any page URL. Use `?theme=reset` to go back to the default.
 
 ## Purpose
 

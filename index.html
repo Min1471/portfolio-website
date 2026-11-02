@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHAKAMIN T. | ANALYTICAL CREATIVE</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Phakamin Tantiwatanavorakul | Data and solutions engineering</title>
+    <meta name="description" content="Phakamin Tantiwatanavorakul: Master of IT (Data Science) from UNSW and First Class Honours electrical communication engineer, building data pipelines, ML models and backend services in Bangkok.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="js/theme.js"></script>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -13,34 +16,42 @@
 </head>
 
 <body class="index-page">
-    <div id="stars-container">
+    <div id="stars-container" aria-hidden="true">
         <div id="stars"></div>
         <div id="stars2"></div>
     </div>
 
     <header>
-        <nav>
+        <nav aria-label="Main">
             <ul>
-                <li><a href="#hero">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#skills">SKILLS</a></li>
-                <li><a href="#achievements">WORK</a></li>
-                <li><a href="#courses">SPECIALIZATIONS</a></li>
-                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#learning">Learning</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section id="hero">
-            <div class="comet-container">
+            <div class="comet-container" aria-hidden="true">
                 <div id="hero-comet" class="comet"></div>
             </div>
+            <svg class="hero-wave" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
+                <line class="axis" x1="0" y1="60" x2="1200" y2="60"></line>
+                <path d="M0,67.8 L4,75.4 L8,40.0 L12,76.4 L16,37.2 L20,55.5 L24,57.2 L28,37.6 L32,60.7 L36,30.9 L40,60.2 L44,42.9 L48,41.0 L52,15.1 L56,48.0 L60,50.0 L64,22.1 L68,24.6 L72,27.7 L76,50.6 L80,20.6 L84,64.9 L88,38.8 L92,55.1 L96,80.1 L100,69.7 L104,76.8 L108,51.5 L112,82.2 L116,75.2 L120,62.9 L124,92.8 L128,72.6 L132,107.3 L136,103.7 L140,96.9 L144,85.3 L148,83.5 L152,104.0 L156,77.1 L160,92.6 L164,93.7 L168,67.5 L172,78.9 L176,82.7 L180,81.0 L184,66.1 L188,57.3 L192,57.0 L196,69.2 L200,45.3 L204,65.4 L208,64.3 L212,32.4 L216,64.8 L220,44.7 L224,57.0 L228,37.7 L232,16.8 L236,39.0 L240,11.3 L244,43.1 L248,24.6 L252,23.4 L256,36.0 L260,27.3 L264,27.0 L268,11.6 L272,41.5 L276,35.3 L280,57.9 L284,44.9 L288,35.2 L292,38.4 L296,37.6 L300,70.9 L304,70.8 L308,54.1 L312,98.8 L316,67.2 L320,97.9 L324,91.7 L328,101.9 L332,74.6 L336,95.9 L340,105.4 L344,84.4 L348,78.2 L352,102.6 L356,90.1 L360,87.7 L364,62.3 L368,77.4 L372,57.8 L376,95.1 L380,76.8 L384,79.5 L388,57.1 L392,40.4 L396,86.8 L400,66.6 L404,74.2 L408,61.9 L412,49.6 L416,46.8 L420,47.2 L424,70.3 L428,34.6 L432,47.2 L436,29.6 L440,13.3 L444,29.0 L448,24.9 L452,34.6 L456,19.0 L460,55.3 L464,17.6 L468,24.1 L472,28.7 L476,23.6 L480,54.2 L484,44.4 L488,67.6 L492,47.3 L496,69.9 L500,79.1 L504,67.6 L508,84.2 L512,70.5 L516,91.0 L520,91.8 L524,88.1 L528,97.9 L532,82.5 L536,104.8 L540,71.3 L544,86.7 L548,97.8 L552,92.7 L556,95.5 L560,85.5 L564,100.0 L568,71.0 L572,70.9 L576,80.2 L580,74.7 L584,87.0 L588,75.4 L592,74.6 L596,65.8 L600,54.2 L604,64.2 L608,61.0 L612,43.6 L616,42.3 L620,53.8 L624,37.7 L628,48.2 L632,36.4 L636,24.4 L640,29.9 L644,26.2 L648,38.6 L652,32.4 L656,38.1 L660,30.0 L664,32.5 L668,34.8 L672,38.3 L676,46.4 L680,38.5 L684,41.1 L688,46.3 L692,48.4 L696,55.0 L700,55.9 L704,67.5 L708,66.0 L712,71.6 L716,77.7 L720,78.9 L724,81.9 L728,82.0 L732,83.4 L736,82.4 L740,86.9 L744,85.9 L748,85.5 L752,87.0 L756,87.4 L760,87.7 L764,85.7 L768,84.1 L772,81.9 L776,79.0 L780,76.5 L784,73.5 L788,70.3 L792,67.0 L796,63.5 L800,60.0 L804,56.5 L808,53.0 L812,49.7 L816,46.5 L820,43.5 L824,40.8 L828,38.4 L832,36.4 L836,34.7 L840,33.4 L844,32.5 L848,32.1 L852,32.1 L856,32.5 L860,33.4 L864,34.7 L868,36.4 L872,38.4 L876,40.8 L880,43.5 L884,46.5 L888,49.7 L892,53.0 L896,56.5 L900,60.0 L904,63.5 L908,67.0 L912,70.3 L916,73.5 L920,76.5 L924,79.2 L928,81.6 L932,83.6 L936,85.3 L940,86.6 L944,87.5 L948,87.9 L952,87.9 L956,87.5 L960,86.6 L964,85.3 L968,83.6 L972,81.6 L976,79.2 L980,76.5 L984,73.5 L988,70.3 L992,67.0 L996,63.5 L1000,60.0 L1004,56.5 L1008,53.0 L1012,49.7 L1016,46.5 L1020,43.5 L1024,40.8 L1028,38.4 L1032,36.4 L1036,34.7 L1040,33.4 L1044,32.5 L1048,32.1 L1052,32.1 L1056,32.5 L1060,33.4 L1064,34.7 L1068,36.4 L1072,38.4 L1076,40.8 L1080,43.5 L1084,46.5 L1088,49.7 L1092,53.0 L1096,56.5 L1100,60.0 L1104,63.5 L1108,67.0 L1112,70.3 L1116,73.5 L1120,76.5 L1124,79.2 L1128,81.6 L1132,83.6 L1136,85.3 L1140,86.6 L1144,87.5 L1148,87.9 L1152,87.9 L1156,87.5 L1160,86.6 L1164,85.3 L1168,83.6 L1172,81.6 L1176,79.2 L1180,76.5 L1184,73.5 L1188,70.3 L1192,67.0 L1196,63.5 L1200,60.0"></path>
+            </svg>
             <div class="container">
                 <div class="hero-content">
-                    <h1>PHAKAMIN<br>TANTIWATANAVORAKUL</h1>
-                    <h2>MASTER OF IT / ELECTRICAL ENGINEER</h2>
-                    <p>Building high-precision digital solutions at the intersection of data science and creative engineering.</p>
+                    <h1>Phakamin<br>Tantiwatanavorakul</h1>
+                    <h2>Data science, enterprise systems and electrical engineering</h2>
+                    <p>I build data pipelines, machine-learning models and backend services in Python, and I have supported a live POS and BMS launch across two sites. I like turning loosely defined problems into precise, testable requirements.</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">See my projects</a>
+                        <a href="#contact" class="btn btn-outline">Get in touch</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -48,31 +59,122 @@
         <section id="about">
             <div class="container">
                 <div class="section-header">
-                    <h2>ABOUT</h2>
+                    <h2>About</h2>
                 </div>
                 <div class="bento-grid">
                     <div class="bento-item about-main">
-                        <p>I bridge the gap between complex electrical systems and modern software architectures. My approach is rooted in analytical rigor, refined through a Master of IT at UNSW and a background in Electrical Engineering.</p>
-                        <p>I don't just write code; I design systems that solve real-world problems through data-driven insights and technical precision.</p>
+                        <p>I trained as an electrical communication engineer at Thammasat University, graduating with First Class Honours and a paper on real-time neural noise cancellation presented at IEEE InCITT 2022. I then completed a Master of IT in Data Science at UNSW in Sydney.</p>
+                        <p>Since then I have worked on both sides of delivery. As an enterprise architecture consultant I broke client problems down into clear, testable requirements. In application support I ran user training, UAT and hypercare for the Doi Tung POS and BMS launch across Bangkok and Chiang Rai.</p>
+                        <p>I am looking for a data or solutions engineering role where I can go deep on one product or domain.</p>
                     </div>
                     <div class="bento-item about-side">
                         <div class="about-image">
-                            <img src="images/profile.png" alt="Profile" loading="lazy">
+                            <img src="images/profile.jpg" alt="Phakamin Tantiwatanavorakul" width="900" height="1200" loading="lazy">
                         </div>
                     </div>
                     <div class="fact-grid">
                         <div class="bento-item fact-card">
-                            <h4>EDUCATION</h4>
-                            <p>MASTER OF IT, UNSW<br>BACHELOR ELECTRICAL ENGINEERING (HONS), THAMMASAT UNIVERSITY</p>
+                            <h4>Education</h4>
+                            <p>Master of IT, Data Science<br><span class="small">UNSW Sydney, 2023–2025</span></p>
+                            <p>B.Eng. Electrical Communication Engineering, First Class Honours<br><span class="small">Thammasat University, 2018–2022</span></p>
                         </div>
                         <div class="bento-item fact-card">
-                            <h4>SPECIALIZATION</h4>
-                            <p>DATA ENGINEERING<br>MACHINE LEARNING</p>
+                            <h4>Based in</h4>
+                            <p>Bangkok, Thailand</p>
+                            <p>Thai (native)<br>English (professional, two years studying in Australia)</p>
                         </div>
                         <div class="bento-item fact-card">
-                            <h4>STATUS</h4>
-                            <p>AVAILABLE FOR<br>INNOVATIVE ROLES</p>
+                            <h4>Open to</h4>
+                            <p>Data engineering, data analytics and solutions engineering roles</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Experience</h2>
+                </div>
+                <ol class="timeline">
+                    <li class="timeline-item">
+                        <div class="timeline-when">Jul – Oct 2026<span>TMES, Bangkok</span></div>
+                        <div class="timeline-body">
+                            <h3>Application Support</h3>
+                            <p class="org">TMES, Thai CC Tower, Bangkok</p>
+                            <ul>
+                                <li>Ran user training and UAT for the Doi Tung POS and BMS launch across five business units at two sites, Bangkok and Mae Fah Luang in Chiang Rai, then supported a month of on-site hypercare through go-live.</li>
+                                <li>Investigated reported issues through structured root-cause analysis and handed them to the right team with the evidence needed to fix them.</li>
+                                <li>Ran incident management for PANPURI, a legacy system, and produced the weekly incident summary from Jira exports.</li>
+                                <li>Wrote the Thai-language user manual for the kiosk machines, aimed at non-technical staff.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-when">May – Jun 2026<span>TMES, Bangkok</span></div>
+                        <div class="timeline-body">
+                            <h3>Enterprise Architecture Consultant</h3>
+                            <p class="org">TMES, Thai CC Tower, Bangkok</p>
+                            <ul>
+                                <li>Worked directly with client users to break operational problems down into clear, testable technical requirements.</li>
+                                <li>Designed a cybersecurity dashboard for C-level and management readers, defining what it measures and coordinating data collection across the cybersecurity, infrastructure, IT and governance teams.</li>
+                                <li>Drafted infrastructure architecture blueprints and IT standards.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-when">Jun – Aug 2022<span>Thailand</span></div>
+                        <div class="timeline-body">
+                            <h3>Engineering Intern</h3>
+                            <p class="org">AIT Service Thailand</p>
+                            <ul>
+                                <li>Designed and prototyped engineering systems end to end, from conveyor belts and mechanical arms to electrical plans.</li>
+                                <li>Maintained electrical equipment and supported customers on technical issues.</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Projects</h2>
+                </div>
+                <div class="achievement-cards-wrapper">
+                    <div class="achievement-cards">
+                        <article class="bento-item achievement-card">
+                            <div class="meta">Data engineering, 2026</div>
+                            <h3>Crypto data analysis</h3>
+                            <p>A scheduled Python ETL job pulls CoinGecko market data every 5–10 minutes into a SQLite warehouse, feeding a Power BI dashboard of price and volume trends.</p>
+                            <a href="pages/achievements/crypto-pipeline-analyst.html" class="btn-text">View project</a>
+                        </article>
+                        <article class="bento-item achievement-card">
+                            <div class="meta">Backend development, 2025</div>
+                            <h3>CeleStE conference management API</h3>
+                            <p>Low-latency, stateless FastAPI services over SQLite, MongoDB and Redis, covered by over 100 unit tests at 90% code coverage.</p>
+                            <a href="pages/achievements/conference-management.html" class="btn-text">View project</a>
+                        </article>
+                        <article class="bento-item achievement-card">
+                            <div class="meta">Machine learning, 2025</div>
+                            <h3>Customer satisfaction modelling</h3>
+                            <p>Diagnosed and handled distribution shift in large customer-survey datasets, then compared models that forecast satisfaction trends under the shifted data.</p>
+                            <a href="pages/achievements/customer-satisfaction.html" class="btn-text">View project</a>
+                        </article>
+                        <article class="bento-item achievement-card">
+                            <div class="meta">NLP, 2024</div>
+                            <h3>Emotion classification from tweets</h3>
+                            <p>Compared probabilistic and deep-learning classifiers on Twitter text, then added BERT embeddings to lift performance above 90% F1.</p>
+                            <a href="pages/achievements/emotion.html" class="btn-text">View project</a>
+                        </article>
+                        <article class="bento-item achievement-card">
+                            <div class="meta">Published research, IEEE InCITT 2022</div>
+                            <h3>Adaptive noise cancellation</h3>
+                            <p>A fully connected network that suppresses background noise in real time, improving PESQ by 10% with latency under 300 ms.</p>
+                            <a href="pages/achievements/adaptive-noise-cancellation.html" class="btn-text">View project</a>
+                        </article>
                     </div>
                 </div>
             </div>
@@ -81,143 +183,99 @@
         <section id="skills">
             <div class="container">
                 <div class="section-header">
-                    <h2>SKILLS</h2>
+                    <h2>Skills</h2>
                 </div>
                 <div class="skills-grid">
                     <div class="bento-item skill-card">
-                        <h3>LANGUAGES</h3>
-                        <div class="skill-list">
-                            <div class="skill-tag">
-                                <span class="skill-name">PYTHON</span>
-                                <span class="skill-level">EXPERT</span>
-                            </div>
-                            <div class="skill-tag">
-                                <span class="skill-name">SQL</span>
-                                <span class="skill-level">EXPERT</span>
-                            </div>
-                            <div class="skill-tag">
-                                <span class="skill-name">JAVASCRIPT</span>
-                                <span class="skill-level">ADVANCED</span>
-                            </div>
-                            <div class="skill-tag">
-                                <span class="skill-name">C/C++</span>
-                                <span class="skill-level">INTERMEDIATE</span>
-                            </div>
-                        </div>
+                        <h3>Programming</h3>
+                        <ul class="skill-list">
+                            <li class="skill-tag">Python</li>
+                            <li class="skill-tag">SQL</li>
+                            <li class="skill-tag">PySpark</li>
+                            <li class="skill-tag">PyTorch</li>
+                            <li class="skill-tag">MATLAB</li>
+                            <li class="skill-tag">C</li>
+                        </ul>
                     </div>
                     <div class="bento-item skill-card">
-                        <h3>DATA & INFRA</h3>
-                        <div class="skill-list">
-                            <div class="skill-tag">
-                                <span class="skill-name">MONGODB</span>
-                                <span class="skill-level">ADVANCED</span>
-                            </div>
-                            <div class="skill-tag">
-                                <span class="skill-name">POSTGRES</span>
-                                <span class="skill-level">EXPERT</span>
-                            </div>
-                            <div class="skill-tag">
-                                <span class="skill-name">AWS</span>
-                                <span class="skill-level">ADVANCED</span>
-                            </div>
-                            <div class="skill-tag">
-                                <span class="skill-name">DOCKER</span>
-                                <span class="skill-level">INTERMEDIATE</span>
-                            </div>
-                        </div>
+                        <h3>Data engineering</h3>
+                        <ul class="skill-list">
+                            <li class="skill-tag">ETL / ELT pipelines</li>
+                            <li class="skill-tag">Data modelling</li>
+                            <li class="skill-tag">FastAPI</li>
+                            <li class="skill-tag">SQLite</li>
+                            <li class="skill-tag">MongoDB</li>
+                            <li class="skill-tag">Redis</li>
+                            <li class="skill-tag">Power BI</li>
+                        </ul>
                     </div>
                     <div class="bento-item skill-card">
-                        <h3>CORE TECH</h3>
-                        <div class="skill-list">
-                            <div class="skill-tag">
-                                <span class="skill-name">PYTORCH</span>
-                                <span class="skill-level">ADVANCED</span>
-                            </div>
-                            <div class="skill-tag">
-                                <span class="skill-name">PANDAS</span>
-                                <span class="skill-level">EXPERT</span>
-                            </div>
-                            <div class="skill-tag">
-                                <span class="skill-name">SPARK</span>
-                                <span class="skill-level">INTERMEDIATE</span>
-                            </div>
-                            <div class="skill-tag">
-                                <span class="skill-name">TABLEAU</span>
-                                <span class="skill-level">ADVANCED</span>
-                            </div>
-                        </div>
+                        <h3>Machine learning and analysis</h3>
+                        <ul class="skill-list">
+                            <li class="skill-tag">Deep learning (LSTM, GRU)</li>
+                            <li class="skill-tag">NLP with BERT</li>
+                            <li class="skill-tag">scikit-learn</li>
+                            <li class="skill-tag">Distribution shift</li>
+                            <li class="skill-tag">Statistics and probability</li>
+                            <li class="skill-tag">Signal processing</li>
+                            <li class="skill-tag">K-Means clustering</li>
+                        </ul>
                     </div>
-                </div>
-
-                <div class="tech-strip">
-                    <div class="tech-item"><img src="images/icons/aws.png" alt="AWS" loading="lazy"><span>AWS</span></div>
-                    <div class="tech-item"><img src="images/icons/docker.png" alt="DOCKER" loading="lazy"><span>DOCKER</span></div>
-                    <div class="tech-item"><img src="images/icons/git.png" alt="GIT" loading="lazy"><span>GIT</span></div>
-                    <div class="tech-item"><img src="images/icons/mongodb.png" alt="MONGODB" loading="lazy"><span>MONGODB</span></div>
-                    <div class="tech-item"><img src="images/icons/sql.png" alt="SQL" loading="lazy"><span>SQL</span></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="achievements">
-            <div class="container">
-                <div class="section-header">
-                    <h2>WORK</h2>
-                </div>
-                <div class="achievement-cards-wrapper">
-                    <div class="achievement-cards">
-                        <div class="bento-item achievement-card">
-                            <div class="meta">SOFTWARE ARCHITECTURE</div>
-                            <h3>CONFERENCE MANAGEMENT APP</h3>
-                            <p>Full-stack solution utilizing FastAPI and Redis for high-concurrency event management.</p>
-                            <a href="pages/achievements/conference-management.html" class="btn-text">EXPLORE →</a>
-                        </div>
-                        <div class="bento-item achievement-card">
-                            <div class="meta">DATA ENGINEERING</div>
-                            <h3>CRYPTO DATA PIPELINE</h3>
-                            <p>Automated extraction and processing of market data with custom visualization engines.</p>
-                            <a href="pages/achievements/crypto-pipeline-analyst.html" class="btn-text">EXPLORE →</a>
-                        </div>
-                        <div class="bento-item achievement-card">
-                            <div class="meta">MACHINE LEARNING</div>
-                            <h3>ADAPTIVE NOISE CANCELLATION</h3>
-                            <p>Neural network implementation for real-time environmental audio optimization.</p>
-                            <a href="pages/achievements/adaptive-noise-cancellation.html" class="btn-text">EXPLORE →</a>
-                        </div>
-                        <div class="bento-item achievement-card">
-                            <div class="meta">MACHINE LEARNING</div>
-                            <h3>AI CHATBOT</h3>
-                            <p>NLP implementation for intelligent conversational interfaces using TensorFlow.</p>
-                            <a href="pages/achievements/chatbot.html" class="btn-text">EXPLORE →</a>
-                        </div>
-                        <div class="bento-item achievement-card">
-                            <div class="meta">DATA SCIENCE</div>
-                            <h3>EMOTION CLASSIFICATION</h3>
-                            <p>Comparative study of various ML models for sentiment analysis in text data.</p>
-                            <a href="pages/achievements/emotion.html" class="btn-text">EXPLORE →</a>
-                        </div>
+                    <div class="bento-item skill-card">
+                        <h3>Delivery and communication</h3>
+                        <ul class="skill-list">
+                            <li class="skill-tag">Requirements gathering</li>
+                            <li class="skill-tag">UAT and hypercare</li>
+                            <li class="skill-tag">User training</li>
+                            <li class="skill-tag">Root-cause analysis</li>
+                            <li class="skill-tag">Incident reporting (Jira)</li>
+                            <li class="skill-tag">Technical writing</li>
+                            <li class="skill-tag">Advanced Excel</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="courses">
+        <section id="learning">
             <div class="container">
                 <div class="section-header">
-                    <h2>TECHNICAL SPECIALIZATIONS</h2>
+                    <h2>Learning and hackathons</h2>
                 </div>
-                <div class="achievement-cards">
-                    <div class="bento-item achievement-card">
-                        <div class="meta">PROFESSIONAL TRAINING</div>
-                        <h3>AI FOR BUSINESS & INDUSTRY</h3>
-                        <p>Intensive program on industrial AI applications and strategic ML implementation by AMEICC.</p>
-                        <a href="pages/courses/ai-training.html" class="btn-text">EXPLORE →</a>
+                <div class="learning-grid">
+                    <div class="bento-item">
+                        <h3>Courses and certificates</h3>
+                        <ul class="learning-list">
+                            <li>
+                                <h4><a href="pages/courses/google-cloud.html">Google Cloud Digital Leader Training Professional Certificate</a></h4>
+                                <p>Coursera, Google</p>
+                            </li>
+                            <li>
+                                <h4><a href="pages/courses/ai-training.html">AI for Business and Industry Training Program</a></h4>
+                                <p>AMEICC (AEM-METI), 2021</p>
+                            </li>
+                            <li>
+                                <h4>Foundations of Data Science: K-Means Clustering in Python</h4>
+                                <p>Coursera, University of London</p>
+                            </li>
+                            <li>
+                                <h4>Data Science Math Skills</h4>
+                                <p>Coursera, Duke University</p>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="bento-item achievement-card">
-                        <div class="meta">PROFESSIONAL CERTIFICATE</div>
-                        <h3>GOOGLE CLOUD DIGITAL LEADER</h3>
-                        <p>Comprehensive training on fundamental Google Cloud concepts, infrastructure, and security services.</p>
-                        <a href="pages/courses/google-cloud.html" class="btn-text">EXPLORE →</a>
+                    <div class="bento-item">
+                        <h3>Hackathons</h3>
+                        <ul class="learning-list">
+                            <li>
+                                <h4>AI EdTech Hackathon, 3rd of 10 teams (2024)</h4>
+                                <p>Framed the accommodation problems international students face, then built and pitched an AI-assisted solution with tools such as v0, in a team of two.</p>
+                            </li>
+                            <li>
+                                <h4><a href="pages/achievements/chatbot.html">Terrible Idea Hackathon (2023)</a></h4>
+                                <p>Built a voice-driven AI chatbot that listens to a presentation and roasts it back.</p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -226,28 +284,25 @@
         <section id="contact">
             <div class="container">
                 <div class="contact-header">
-                    <h2>CONNECT</h2>
-                    <p>Looking for a developer who understands both the electrons and the bits? Reach out through any of these cosmic beacons.</p>
+                    <h2>Get in touch</h2>
+                    <p>Hiring for a data or solutions engineering role, or want to talk about a project? Email is the fastest way to reach me.</p>
                 </div>
-                
+
                 <div class="beacon-grid">
                     <a href="mailto:phakamintanti47600@gmail.com" class="beacon-item">
-                        <div class="beacon-icon">✉</div>
-                        <div class="beacon-label">EMAIL</div>
-                        <div class="beacon-value">PHAKAMINTANTI47600@GMAIL.COM</div>
-                        <div class="beacon-glow"></div>
+                        <div class="beacon-icon" aria-hidden="true">✉</div>
+                        <div class="beacon-label">Email</div>
+                        <div class="beacon-value">phakamintanti47600@gmail.com</div>
                     </a>
-                    <a href="https://linkedin.com/in/phakamin" target="_blank" class="beacon-item">
-                        <div class="beacon-icon">in</div>
-                        <div class="beacon-label">LINKEDIN</div>
-                        <div class="beacon-value">IN/PHAKAMIN</div>
-                        <div class="beacon-glow"></div>
+                    <a href="https://linkedin.com/in/phakamin" target="_blank" rel="noopener" class="beacon-item">
+                        <div class="beacon-icon" aria-hidden="true">in</div>
+                        <div class="beacon-label">LinkedIn</div>
+                        <div class="beacon-value">in/phakamin</div>
                     </a>
-                    <a href="https://github.com/Min1471" target="_blank" class="beacon-item">
-                        <div class="beacon-icon">GH</div>
-                        <div class="beacon-label">GITHUB</div>
-                        <div class="beacon-value">MIN1471</div>
-                        <div class="beacon-glow"></div>
+                    <a href="https://github.com/Min1471" target="_blank" rel="noopener" class="beacon-item">
+                        <div class="beacon-icon" aria-hidden="true">GH</div>
+                        <div class="beacon-label">GitHub</div>
+                        <div class="beacon-value">Min1471</div>
                     </a>
                 </div>
             </div>
@@ -256,7 +311,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 PHAKAMIN T. // ANALYTICAL CREATIVE // ALL RIGHTS RESERVED.</p>
+            <p>&copy; 2026 Phakamin Tantiwatanavorakul</p>
         </div>
     </footer>
 
@@ -266,4 +321,3 @@
 </body>
 
 </html>
->
