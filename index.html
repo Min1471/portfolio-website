@@ -164,7 +164,13 @@
                 <div class="section-header">
                     <h2>Projects</h2>
                 </div>
-                <div class="achievement-cards-wrapper">
+                <div class="cards-carousel">
+                    <button type="button" class="carousel-btn carousel-btn-prev" aria-label="Previous projects"
+                        aria-controls="project-cards" disabled></button>
+                    <button type="button" class="carousel-btn carousel-btn-next" aria-label="Next projects"
+                        aria-controls="project-cards"></button>
+                <div class="achievement-cards-wrapper" id="project-cards" tabindex="0" role="region"
+                    aria-label="Projects, scrollable">
                     <div class="achievement-cards">
                         <article class="bento-item achievement-card">
                             <div class="meta">Data engineering, 2026</div>
@@ -203,6 +209,7 @@
                                 project</a>
                         </article>
                     </div>
+                </div>
                 </div>
             </div>
         </section>

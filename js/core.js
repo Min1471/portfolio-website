@@ -18,6 +18,7 @@ class PortfolioCore {
         this.initCategoryTabs();
         this.initHeaderEffect();
         this.initScrollToTop();
+        this.initProjectCarousel();
         
         // Skip heavy animations if reduced motion is requested
         if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -113,6 +114,46 @@ class PortfolioCore {
         btn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
+    }
+
+    /**
+     * Left/right arrows for the Projects card rail
+     */
+    initProjectCarousel() {
+        const rail = document.getElementById('project-cards');
+        const prev = document.querySelector('.carousel-btn-prev');
+        const next = document.querySelector('.carousel-btn-next');
+        if (!rail || !prev || !next) return;
+
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        const step = () => {
+            const card = rail.querySelector('.achievement-card');
+            if (!card) return rail.clientWidth;
+            const gap = parseFloat(getComputedStyle(rail.firstElementChild).columnGap) || 0;
+            return card.getBoundingClientRect().width + gap;
+        };
+
+        const update = () => {
+            const max = rail.scrollWidth - rail.clientWidth;
+            prev.disabled = rail.scrollLeft <= 4;
+            next.disabled = rail.scrollLeft >= max - 4;
+        };
+
+        const go = (dir) => rail.scrollBy({
+            left: dir * step(),
+            behavior: reduceMotion ? 'auto' : 'smooth'
+        });
+
+        prev.addEventListener('click', () => go(-1));
+        next.addEventListener('click', () => go(1));
+        rail.addEventListener('scroll', update, { passive: true });
+        window.addEventListener('resize', update, { passive: true });
+        rail.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') { e.preventDefault(); go(1); }
+            if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); }
+        });
+        update();
     }
 
     /**

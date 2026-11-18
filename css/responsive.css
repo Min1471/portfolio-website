@@ -68,9 +68,14 @@
         padding: 2rem;
     }
 
-    /* Project rail becomes a vertical stack */
+    /* Project rail becomes a vertical stack, so the arrows are not needed */
+    .carousel-btn {
+        display: none;
+    }
+
     .achievement-cards-wrapper {
         overflow-x: visible;
+        margin: 0;
         padding: 0;
     }
 
